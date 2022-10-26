@@ -1,6 +1,6 @@
 <h2>Create New Music</h2>
 
-<%= form_tag musics_path, class: 'form' do %>
+<%= form_tag musics_path, class: 'form', id: "create_music_form" do %>
   <%= label :music, :title, 'Title', class: 'col-form-label' %>
   <%= text_field :music, :title, class: 'form-control' %>
   <%= label :music, :category, 'Category', class: 'col-form-label' %>
