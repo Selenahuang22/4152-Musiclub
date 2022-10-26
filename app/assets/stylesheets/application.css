@@ -48,9 +48,24 @@
   #create_music_form select {
     height: 30px;
     width: 50em;
+    font-size: medium;
   }
   #create_music_form input[type="submit"] {
-    width: 20em;
+    width: 50vh;
+    height: 30px;
+    font-size: 15px;
+  }
+  .link_button {
+    text-align: center;
+    background: lightsalmon;
+    font-size: 1.9vh;
+    border-radius: 1.5vh;
+    width: 50vh;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    display: grid;
   }
   .odd {
     background: white;
@@ -122,11 +137,13 @@
     background: rosybrown;
     margin: 1em 0;
     padding: 4px;
+    font-size: large;
   }
   #flash_error {
     background: pink;
     margin: 1em 0;
     padding: 4px;
+    font-size: large;
   }
   ul#page_nav {
     margin: 2em 0 0;
@@ -151,6 +168,7 @@
     width: 150px;
     vertical-align: top;
     line-height: 25px;
+    margin-top: 10px;
   }
   form #submit {
     margin-left: 150px;
