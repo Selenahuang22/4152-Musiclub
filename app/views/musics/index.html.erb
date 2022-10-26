@@ -1,0 +1,65 @@
+<h2>All Musics</h2>
+
+<%= form_tag musics_path, method: :get, id: 'categories_form' do %>
+  <%= hidden_field_tag 'sort_by', @sort_by %>
+  Include:
+  <% @all_categories.each do |category| %>
+    <div class="form-check  form-check-inline">
+      <%= label_tag "categories[#{category}]", category, class: 'form-check-label' %>
+      <%= check_box_tag "categories[#{category}]", '1', (@categories_to_show_hash.include?(category)),
+        class: 'form-check-input' %>
+    </div>
+  <% end %>
+  <%= submit_tag 'Refresh', id: 'categories_submit', class: 'btn btn-primary' %>
+<% end %>
+
+<table class="table table-striped col-md-12" id="musics">
+  <thead>
+    <tr>
+      <th>
+        <%= link_to 'Music Title', musics_path({sort_by: 'title', categories: @categories_to_show_hash}),
+                      id: 'title_header', class: ('bg-warning hilite' if @sort_by == 'title') %>
+      </th>
+      <th>Category</th>
+      <th>
+        <%= link_to 'Release Date',
+              musics_path({sort_by: 'release_date', categories: @categories_to_show_hash}),
+              id: 'release_date_header', class: ('bg-warning hilite' if @sort_by == 'release_date') %>
+      </th>
+      <th>More information</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Love story
+      </td>
+      <td>
+        Country
+      </td>
+      <td>
+        02/21/2007
+      </td>
+      <td>
+        <%= link_to "More about Love Story"%>
+      </td>
+    </tr>
+    <% @musics.each do |music| %>
+      <tr>
+        <td>
+          <%= music.title %>
+        </td>
+        <td>
+          <%= music.category %>
+        </td>
+        <td>
+          <%= music.release_date %>
+        </td>
+        <td>
+          <%= link_to "More about #{music.title}", music_path(music) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Add new music', new_music_path, class: 'btn btn-primary' %>

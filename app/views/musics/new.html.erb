@@ -1,0 +1,18 @@
+<h2>Create New Music</h2>
+
+<%= form_tag musics_path, class: 'form' do %>
+  <%= label :music, :title, 'Title', class: 'col-form-label' %>
+  <%= text_field :music, :title, class: 'form-control' %>
+  <%= label :music, :category, 'Category', class: 'col-form-label' %>
+  <%= select :music, :category, ['Rock', 'Country', 'Pop', 'Blues', 'Classical', 'Jazz'], {}, {class: 'form-control col-1'} %>
+  <%= label :music, :description, 'Description', class: 'col-form-label' %>
+  <%= text_field :music, 'description', class: 'form-control' %>
+  <%= label :music, :release_date, 'Released On', class: 'col-form-label' %>
+  <%= date_select :music, :release_date, {}, class: 'form-control col-2 d-inline' %>
+  <%= label :music, :singer, 'Singer', class: 'col-form-label' %>
+  <%= text_field :music, 'singer', class: 'form-control' %>
+  <br/>
+  <%= submit_tag 'Save Changes', class: 'btn btn-primary' %>
+  <%= link_to 'Cancel', musics_path, class: 'btn btn-secondary' %>
+<% end %>
+

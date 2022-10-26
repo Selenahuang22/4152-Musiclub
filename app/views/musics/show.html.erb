@@ -1,0 +1,28 @@
+
+<h2>Details about <em><%= @music.title %></em></h2>
+
+<ul id="details">
+  <li>
+    Category:
+    <%= @music.category %>
+  </li>
+  <li>
+    Released on:
+    <%= @music.release_date.strftime("%B %d, %Y") %>
+  </li>
+  <li>
+    Singer:
+    <%= @music.singer %>
+  </li>
+</ul>
+
+<h3>Description:</h3>
+<p id="description">
+  <%= @music.description %>
+</p>
+
+<div class="row">
+  <%= link_to 'Edit', edit_music_path(@music), class: 'btn btn-primary col-2' %>
+  <%= link_to 'Delete', music_path(@music), 'data-method': 'delete', 'data-confirm': 'Are you sure?', class: 'btn btn-danger col-2' %>
+  <%= link_to 'Back to music list', musics_path, class: 'btn btn-primary col-2' %>
+</div>
