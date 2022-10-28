@@ -1,5 +1,5 @@
 <h2>Edit Existing Music</h2>
-<%= form_tag music_path(@music), :method => :put do %>
+<%= form_tag music_path(@music), :method => :put, id: 'edit_music_form' do %>
   <%= label :music, :title, 'Title', class: 'col-form-label' %>
   <%= text_field :music, 'title', class: 'form-control' %>
   <%= label :music, :category, 'Category', class: 'col-form-label'  %>
@@ -12,5 +12,5 @@
   <%= text_field :music, 'singer', class: 'form-control' %>
   <br/>
   <%= submit_tag 'Update Music Info', class: 'btn btn-primary' %>
-  <%= link_to 'Cancel', musics_path, class: 'btn btn-secondary' %>
+  <%= link_to 'Cancel', musics_path, class: 'link_button' %>
 <% end %>

@@ -41,16 +41,20 @@
     margin-top: 15px;
     margin-bottom: 15px;
   }
-  #create_music_form {
+  #create_music_form,
+  #edit_music_form {
     display: grid;
   }
   #create_music_form input,
-  #create_music_form select {
+  #create_music_form select,
+  #edit_music_form input,
+  #edit_music_form select{
     height: 30px;
     width: 50em;
     font-size: medium;
   }
-  #create_music_form input[type="submit"] {
+  #create_music_form input[type="submit"],
+  #edit_music_form input[type="submit"] {
     width: 50vh;
     height: 30px;
     font-size: 15px;
@@ -58,7 +62,7 @@
   .link_button {
     text-align: center;
     background: lightsalmon;
-    font-size: 1.9vh;
+    font-size: 2.5vh;
     border-radius: 1.5vh;
     width: 50vh;
     height: 30px;
@@ -66,6 +70,14 @@
     margin-bottom: 10px;
     align-items: center;
     display: grid;
+  }
+
+  #edit_button,
+  #back_button {
+    background: lightgoldenrodyellow;
+  }
+  .row {
+    margin-top: 30px;
   }
   .odd {
     background: white;

@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 musics = [
-  { title: 'Love story', category: 'Country', release_date: '25-Nov-1992', singer: 'Taylor Swift', description: "Lovely music by Taylor" }
+  #{ title: 'Love story', category: 'Country', release_date: '25-Nov-1992', singer: 'Taylor Swift', description: "Lovely music by Taylor" }
 ]
 
 musics.each do |music|
