@@ -8,11 +8,7 @@
 
 musics = [
   { title: 'Love story Country', category: 'country', release_date: '25-Nov-1992', singer: 'Taylor Swift', description: "Lovely music by Taylor" },
-  { title: 'Love story Rock', category: 'rock', release_date: '25-Nov-1992', singer: 'Taylor Swift', description: "Lovely music by Taylor" },
-  { title: 'Love story Pop', category: 'pop', release_date: '25-Nov-1992', singer: 'Taylor Swift', description: "Lovely music by Taylor" },
-  { title: 'Love story Blues', category: 'blues', release_date: '25-Nov-1992', singer: 'Taylor Swift', description: "Lovely music by Taylor" },
-  { title: 'Love story Classical', category: 'classical', release_date: '25-Nov-1992', singer: 'Taylor Swift', description: "Lovely music by Taylor" },
-  { title: 'Love story Jazz', category: 'jazz', release_date: '25-Nov-1992', singer: 'Taylor Swift', description: "Lovely music by Taylor" },
+  { title: 'Love story Rock', category: 'rock', release_date: '25-Nov-1992', singer: 'Taylor Swift', description: "Lovely music by Taylor" }
 
 ]
 
