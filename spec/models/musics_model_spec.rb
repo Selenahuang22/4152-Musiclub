@@ -1,0 +1,26 @@
+require 'rails_helper'
+require 'spec_helper'
+
+describe Music do
+    describe 'test self.all_categories' do
+        it 'should return all categories' do
+          expect(Music.all_categories).to match(%w(rock country pop blues classical jazz))
+        end
+    end
+
+    describe 'test.with_categories' do
+        let!(:music1) { FactoryBot.create(:music, title: 'M1',category:'pop') }
+        let!(:music2) { FactoryBot.create(:music, title: 'M2',category:'pop') }
+        let!(:music3) { FactoryBot.create(:music, title: 'M3',category:'rock')}
+        @sort_by='title'
+        @no_categories=nil
+        it 'should return all when categories is nil' do
+            expect(Music.with_categories(@no_categories,@sort_by)).to match_array([music1,music2,music3])
+        end
+        it 'should return all with specific categories' do
+            # puts Music.with_categories(['pop'],@sort_by)
+            expect(Music.with_categories(['pop'],@sort_by)).to match_array([music1,music2])
+        end
+    end
+end
+
