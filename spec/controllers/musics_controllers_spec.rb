@@ -37,7 +37,7 @@ describe MusicsController do
             expect(response).to render_template('edit')
         end
     end
-    
+
     describe 'test update' do
         it 'should call update method' do
             music1=Music.create!(:title => 'M1', :category => 'C1' )
