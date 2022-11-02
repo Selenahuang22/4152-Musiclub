@@ -11,11 +11,6 @@ Given /the following music exist/ do |table|
   end
 end
 
-Then /^(?:|I ) (should )?view the details of "(.*)"/ do |music_title|
-  When %{I follow "More about #{music_title}"}
-  # click_link("More about #{music_title}")
-end
-
 Then /(.*) seed music should exist/ do | n_seeds |
   expect(Music.count).to eq n_seeds.to_i
 end
