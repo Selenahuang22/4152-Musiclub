@@ -3,8 +3,8 @@ require 'spec_helper'
 
 describe MusicsController do
     describe 'test show' do
+        let!(:music1) { FactoryBot.create(:music) }
         it 'should call show method' do
-            music1=Music.create!(:title => 'M1', :category => 'C1' )
             get :show, :id=>music1.id
             expect(assigns(:music)).to eql(music1)
             expect(response).to render_template('show')
@@ -13,12 +13,11 @@ describe MusicsController do
 
     # describe 'test index' do
     #     it 'should call index method' do
-
-
-
-
+    #         get :index
+    #         (assigns(:all_categories)).to eql([])
     #     end
     # end
+
 
     describe 'test create' do
         it 'should call create method' do
@@ -30,8 +29,8 @@ describe MusicsController do
     end 
 
     describe 'test edit' do
+        let!(:music1) { FactoryBot.create(:music) }
         it 'should call edit method' do
-            music1=Music.create!(:title => 'M1', :category => 'C1' )
             get :edit, :id=>music1.id
             expect(assigns(:music)).to eql(music1)
             expect(response).to render_template('edit')
@@ -39,22 +38,21 @@ describe MusicsController do
     end
 
     describe 'test update' do
+        let!(:music1) { FactoryBot.create(:music) }
         it 'should call update method' do
-            music1=Music.create!(:title => 'M1', :category => 'C1' )
-            put :update, :id=>music1.id,:music=>music1.attributes={:title => 'M2'}
-            expect(flash[:notice]).to eq("M2 was successfully updated.")
+            put :update, :id=>music1.id,:music=>music1.attributes={:title => 'Modified'}
+            expect(flash[:notice]).to eq("Modified was successfully updated.")
             expect(response).to redirect_to(music_path(music1))
         end
     end
             
 
     describe 'test destroy' do
+        let!(:music1) { FactoryBot.create(:music,:title=>'M1') }
         it 'should call destroy method' do
-          music1=Music.create!(:title => 'M1', :category => 'C1', :id => 1)
           delete :destroy, :id => music1.id
           expect(flash[:notice]).to eq("Music 'M1' deleted.")
           expect(response).to redirect_to(musics_path)
         end
     end
-
 end
