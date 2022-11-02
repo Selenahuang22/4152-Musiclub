@@ -13,12 +13,11 @@ describe MusicsController do
 
     # describe 'test index' do
     #     it 'should call index method' do
-
-
-
-
+    #         get :index
+    #         (assigns(:all_categories)).to eql([])
     #     end
     # end
+
 
     describe 'test create' do
         it 'should call create method' do
@@ -56,5 +55,4 @@ describe MusicsController do
           expect(response).to redirect_to(musics_path)
         end
     end
-
 end
