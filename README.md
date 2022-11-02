@@ -13,4 +13,8 @@ rake db:seed
 rails server
 
 Instructions to test product:
+rake cucumber
+rake spec
+run coverage/index.html to see coverage situation
+
 
