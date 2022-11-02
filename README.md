@@ -17,4 +17,8 @@
 * rake spec
 * run coverage/index.html to see coverage situation
 
+## Heroku deployment link:
+https://musiclub4152.herokuapp.com
+
+
 
