@@ -1,13 +1,13 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/app/helpers/application_helper.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/app/helpers/musics_helper.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/helpers/musics_helper.rb": {
         "lines": [
           1,
           null,
@@ -17,7 +17,7 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/app/controllers/musics_controller.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/controllers/musics_controller.rb": {
         "lines": [
           1,
           1,
@@ -96,7 +96,7 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/app/controllers/application_controller.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
@@ -105,7 +105,7 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/app/models/music.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/models/music.rb": {
         "lines": [
           1,
           null,
@@ -127,11 +127,11 @@
         ]
       }
     },
-    "timestamp": 1667350213
+    "timestamp": 1667415327
   },
   "Cucumber Features": {
     "coverage": {
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/config/environment.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -140,7 +140,7 @@
           1
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/config/application.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/application.rb": {
         "lines": [
           1,
           null,
@@ -213,7 +213,7 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/config/boot.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -223,7 +223,7 @@
           1
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/config/environments/test.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -268,7 +268,7 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/config/initializers/backtrace_silencers.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -279,7 +279,7 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/config/initializers/inflections.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -293,7 +293,7 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/config/initializers/mime_types.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -302,7 +302,7 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/config/initializers/session_store.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/initializers/session_store.rb": {
         "lines": [
           null,
           null,
@@ -314,7 +314,7 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/config/initializers/wrap_parameters.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -332,7 +332,7 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/spec/factories/music_factory.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/spec/factories/music_factory.rb": {
         "lines": [
           1,
           1,
@@ -345,7 +345,7 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/config/routes.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/routes.rb": {
         "lines": [
           1,
           1,
@@ -354,7 +354,7 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/features/support/selectors.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/features/support/selectors.rb": {
         "lines": [
           null,
           null,
@@ -402,7 +402,7 @@
           1
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/features/support/paths.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/features/support/paths.rb": {
         "lines": [
           null,
           null,
@@ -417,10 +417,11 @@
           null,
           null,
           1,
-          4,
+          18,
           null,
-          4,
+          15,
           0,
+          3,
           null,
           null,
           null,
@@ -444,13 +445,13 @@
           1
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/features/step_definitions/music_steps.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/features/step_definitions/music_steps.rb": {
         "lines": [
           null,
           null,
           1,
-          4,
-          36,
+          7,
+          63,
           null,
           null,
           null,
@@ -460,13 +461,12 @@
           null,
           null,
           1,
-          4,
+          7,
           null,
           null,
           null,
           1,
           2,
-          null,
           null,
           null,
           1,
@@ -521,7 +521,7 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/features/step_definitions/web_steps.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/features/step_definitions/web_steps.rb": {
         "lines": [
           null,
           null,
@@ -567,260 +567,240 @@
           null,
           null,
           1,
+          17,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null,
+          1,
+          10,
+          null,
+          null,
+          1,
           4,
           null,
           null,
           1,
           0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          7,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null
+        ]
+      },
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/controllers/musics_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          4,
+          4,
+          null,
+          null,
+          1,
+          23,
+          23,
+          23,
+          23,
+          null,
+          23,
+          23,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          42,
+          19,
+          19,
+          19,
+          null,
+          null,
+          null,
+          1,
+          88,
+          null,
+          null,
+          1,
+          290,
+          null,
+          null,
+          1,
+          65,
+          null,
+          null,
+          1,
           null,
           null,
           1,
           2,
           null,
-          null,
-          1,
-          2,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          1,
-          0,
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/app/models/music.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          12,
-          null,
-          null,
-          1,
-          8,
-          null,
-          0,
-          null,
-          null,
-          8,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/app/controllers/musics_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          8,
-          8,
-          8,
-          8,
-          null,
-          8,
-          8,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          12,
-          4,
-          4,
-          4,
-          null,
-          null,
-          null,
-          1,
-          28,
-          null,
-          null,
-          1,
-          80,
-          null,
-          null,
-          1,
-          20,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/app/controllers/application_controller.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
@@ -829,23 +809,44 @@
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/app/helpers/application_helper.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/wannuosun/Downloads/ColumbiaCS/22Fall/4152Saas/4152-Musiclub/app/helpers/musics_helper.rb": {
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/helpers/musics_helper.rb": {
         "lines": [
           1,
           null,
           1,
           0,
+          null,
+          null
+        ]
+      },
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/models/music.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          33,
+          null,
+          null,
+          1,
+          23,
+          null,
+          0,
+          null,
+          null,
+          23,
+          null,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1667350207
+    "timestamp": 1667415321
   }
 }

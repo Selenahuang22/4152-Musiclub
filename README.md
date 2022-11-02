@@ -1,5 +1,4 @@
 # Musiclub
-
 ## Team member
 - Wannuo Sun (ws2591)
 - Mengyuan Huang (mh4287)
@@ -19,7 +18,5 @@ $ rails server
 $ rake cucumber
 $ rake spec
 ```
-
 ## Heroku deployment link:
 https://musiclub.herokuapp.com/
-

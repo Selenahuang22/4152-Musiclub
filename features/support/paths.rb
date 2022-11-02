@@ -15,6 +15,7 @@ module NavigationHelpers
 
     when /^the (Musiclub )?home\s?page$/ then '/musics'
     when /^the musics page$/ then '/musics'
+    when /^the create page$/ then '/musics/new'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
