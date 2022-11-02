@@ -18,7 +18,7 @@
 * run coverage/index.html to see coverage situation
 
 ## Heroku deployment link:
-https://polar-plains-99042.herokuapp.com/
+https://musiclub.herokuapp.com/
 
 
 
