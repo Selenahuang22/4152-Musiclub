@@ -127,7 +127,7 @@
         ]
       }
     },
-    "timestamp": 1667415327
+    "timestamp": 1667444516
   },
   "Cucumber Features": {
     "coverage": {
@@ -721,6 +721,27 @@
           null
         ]
       },
+      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/models/music.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          33,
+          null,
+          null,
+          1,
+          23,
+          null,
+          0,
+          null,
+          null,
+          23,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/controllers/musics_controller.rb": {
         "lines": [
           1,
@@ -824,29 +845,8 @@
           null,
           null
         ]
-      },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/models/music.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          33,
-          null,
-          null,
-          1,
-          23,
-          null,
-          0,
-          null,
-          null,
-          23,
-          null,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1667415321
+    "timestamp": 1667444510
   }
 }

@@ -1,4 +1,7 @@
-Feature: Create new music to music board
+Feature: Musiclub manager changes music information or delete a music
+
+# Basic function 2: 
+# A manager can update music's information in music details page. He may also remove a music from music board if the song has some problems or Musiclub has no copyrights for the song anymore.
 
 Background: music have been added to database
 
@@ -17,6 +20,7 @@ Background: music have been added to database
   And  I am on the Musiclub home page
   Then 9 seed music should exist
 
+# Update the information for a specific music
 Scenario: go to new music details page and edit music
   Given I am on the Musiclub home page
   When I follow "More about Shake it Off"
@@ -27,6 +31,7 @@ Scenario: go to new music details page and edit music
   And I press "Update Music Info"
   Then I should see "A new description version of Shake it Off"
 
+# Edge case: cancel updating
 Scenario: go back to the home page
   Given I am on the Musiclub home page
   When I follow "More about Shake it Off"
@@ -34,6 +39,7 @@ Scenario: go back to the home page
   And I follow "Back to music list"
   Then I am on the Musiclub home page
 
+# Remove a music from music board
 Scenario: delete a music form Musiclub
   Given I am on the Musiclub home page
   And I should see "Shake it Off"

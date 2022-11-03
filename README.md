@@ -5,7 +5,7 @@
 - Ubuntu version: 20.04/macOS
 
 ## For grade
-- master branch tag v1.2
+- master branch tag v1.3
 
 ## Team member
 - Wannuo Sun (ws2591)
