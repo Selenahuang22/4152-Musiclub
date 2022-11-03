@@ -2,7 +2,7 @@
 
 ## Environment
 - Ruby version: 2.6.6
-- OS: macOS
+- Ubuntu version: 20.04/macOS
 
 ## For grade
 - master branch tag v1.2
