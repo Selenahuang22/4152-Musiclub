@@ -1,9 +1,5 @@
 Feature: display list of music sorted by different criteria
 
-  # As an avid moviegoer
-  # So that I can quickly browse movies based on my preferences
-  # I want to see movies sorted by title or release date
-
 Background: music have been added to database
 
   Given the following music exist:
@@ -28,4 +24,3 @@ Scenario: sort music alphabetically
 Scenario: sort music in increasing order of release date
   When I follow "Release Date"
   Then I should see "So What" before "Toxic"  
-  

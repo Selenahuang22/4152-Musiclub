@@ -1,9 +1,5 @@
 Feature: display list of musics filtered by a specific category
 
-  # As a concerned parent
-  # So that I can quickly browse movies appropriate for my family
-  # I want to see movies matching only certain MPAA ratings
-
 Background: music have been added to database
 
   Given the following music exist

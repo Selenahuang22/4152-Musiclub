@@ -26,7 +26,5 @@ $ rails server
 $ rake cucumber
 $ rake spec
 ```
-
 ## Heroku deployment link:
 https://musiclub.herokuapp.com/
-
