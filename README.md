@@ -1,4 +1,12 @@
 # Musiclub
+
+## Environment
+- Ruby version: 2.6.6
+- OS: macOS
+
+## For grade
+- master branch tag v1.2
+
 ## Team member
 - Wannuo Sun (ws2591)
 - Mengyuan Huang (mh4287)
