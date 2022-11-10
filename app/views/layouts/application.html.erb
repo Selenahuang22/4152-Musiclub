@@ -10,7 +10,10 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-primary text-white mb-3">
-      <h1 id="title">Musiclub</h1>
+      <%= link_to root_path do %>
+        <h1 id="title">Musiclub</h1>
+      <% end %>
+       
       <div id="curr_user">
         <img src="/images/OIP.jpg" />
         <%= link_to 'Current User', '#' %>
