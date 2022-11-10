@@ -22,30 +22,29 @@
       </th>
       <th>Category</th>
       <th>
-        <%= link_to 'Release Date',
-              musics_path({sort_by: 'release_date', categories: @categories_to_show_hash}),
-              id: 'release_date_header', class: ('bg-warning hilite' if @sort_by == 'release_date') %>
+       Singer
       </th>
-      <th>More information</th>
+      <th>Operations</th>
     </tr>
   </thead>
   <tbody>
     <% @musics.each do |music| %>
       <tr>
         <td>
-          <%= music.title %>
+          <%= link_to "#{music.title}", music_path(music) %>
         </td>
         <td>
           <%= music.category %>
         </td>
         <td>
-          <%= music.release_date %>
+          <%= music.singer %>
         </td>
-        <td>
-          <%= link_to "More about #{music.title}", music_path(music) %>
+        <td id="operations">
+          <%= link_to 'Edit', edit_music_path(music), class: 'small_link_button', id: 'edit_button' %>
+          <%= link_to 'Delete', music_path(music), 'data-method': 'delete', 'data-confirm': 'Are you sure?', class: 'small_link_button' %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to 'Add new music', new_music_path, class: 'link_button', id: "add_music" %>
+

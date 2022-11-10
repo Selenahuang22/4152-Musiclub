@@ -59,19 +59,36 @@
     height: 30px;
     font-size: 15px;
   }
+  #operations {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
   .link_button {
     text-align: center;
     background: lightsalmon;
     font-size: 2.5vh;
     border-radius: 1.5vh;
     width: 50vh;
-    height: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
+    height: 30px;
     align-items: center;
     display: grid;
   }
-
+  .small_link_button {
+    text-align: center;
+    background: lightsalmon;
+    font-size: 2.5vh;
+    border-radius: 1.5vh;
+    height: 30px;
+    align-items: center;
+    display: grid;
+    width: 20vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
   #edit_button,
   #back_button {
     background: lightgoldenrodyellow;
@@ -94,10 +111,54 @@
   h1 {
     margin: 0 0 1em;
     padding: 10px;
-    background-color: orange;
+    /*background-color: orange;*/
     color: white;
-    border-bottom: 4px solid gold;
+    /*bottom: 4px solid gold;*/
     font-size: 2em;
+    
+    
+  }
+  nav {
+    background-color: orange;
+    border-bottom: 4px solid gold;
+    display: grid;
+    grid-template-columns: 15% 15% 40% 10% 10% 10%;
+    grid-template-areas: 
+      "title curr_user . my_lib add_music logout";
+    height: 11vh;
+  }
+
+  nav div {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    padding: 18px;
+    
+  }
+  #curr_user {
+    grid-area: curr_user;
+  }
+
+  #curr_user img {
+    width: 30%;
+    height: 80%;
+  }
+  #add_music {
+    grid-area: add_music;
+  }
+  #add_music a, #my_lib a, #logout a, #curr_user a {
+    color: white;
+  }
+  #curr_user a {
+    text-decoration: none;
+  }
+  #my_lib{
+    grid-area: my_lib;
+  }
+  #logout {
+    grid-area: logout;
   }
   h1 a {
     text-decoration: none;
@@ -115,7 +176,7 @@
   }
   table#musics th, table#musics td {
     padding: 4px;
-    text-align: left;
+    text-align: center;
     border: 2px solid black;
   }
   em {
