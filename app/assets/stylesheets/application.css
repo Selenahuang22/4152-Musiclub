@@ -26,7 +26,7 @@
     padding: 0;
     background: transparent;
     color: maroon;
-    font-size: 1.5em;
+    font-size: 2em;
   }
   main#main {
     margin-left: 15px;
@@ -42,8 +42,45 @@
     margin-bottom: 15px;
   }
   #create_music_form,
-  #edit_music_form {
+  #edit_music_form, #login_form {
     display: grid;
+  }
+
+  #login_form{
+    justify-items: center;
+    margin-top: 8vh;
+  }
+
+  #login_form input {
+    width: 375px;
+    height: 46px;
+    line-height: 30px;
+    display: inline;
+    padding-left: 16px;
+    padding-right: 39px;
+    border-radius: 4px;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  #login_form input[type="submit"] {
+    text-align: center;
+    line-height: 29px;
+    height: 48px;
+    width: 432px;
+    cursor: pointer;
+    border: 0 none;
+    font-size: 16px;
+    background: #F66F6A;
+    border-radius: 4px;
+    font-family: PingFangSC-Medium;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-top: 11px;
+  }
+  #login_title {
+    text-align: center;
+    
   }
   #create_music_form input,
   #create_music_form select,
@@ -280,6 +317,7 @@
     vertical-align: top;
     line-height: 25px;
     margin-top: 10px;
+    font-size: 3.5vh;
   }
   form #submit {
     margin-left: 150px;
