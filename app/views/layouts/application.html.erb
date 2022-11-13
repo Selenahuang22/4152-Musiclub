@@ -15,14 +15,17 @@
       <% end %>
        
       <div id="curr_user">
-        <img src="/images/OIP.jpg" />
-        <%= link_to 'Current User', '#' %>
+        <% if @current_user %>
+          <img src="/images/OIP.jpg" />
+          <%= link_to @current_user.name, '#' %>
+        <% else %>
+        <% end %>
       </div>
 
       <div id="my_lib"><%= link_to 'My Library', '#' %></div>
       
       <div id="add_music"><%= link_to 'New music', new_music_path %></div>
-      <div id="logout"><%= link_to 'Log Out', '#' %></div>
+      <div id="logout"><%= link_to 'Log Out', '/logout', method:'delete' %></div>
       
       
     </nav>
