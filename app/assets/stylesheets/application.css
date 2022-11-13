@@ -42,7 +42,7 @@
     margin-bottom: 15px;
   }
   #create_music_form,
-  #edit_music_form, #login_form {
+  #edit_music_form, #login_form, #payment_method_form {
     display: grid;
   }
 
@@ -50,8 +50,11 @@
     justify-items: center;
     margin-top: 8vh;
   }
+  #payment_method_form {
+    justify-items: center;
+  }
 
-  #login_form input {
+  #login_form input, #payment_method_form input {
     width: 375px;
     height: 46px;
     line-height: 30px;
@@ -63,7 +66,7 @@
     margin-top: 10px;
   }
 
-  #login_form input[type="submit"] {
+  #login_form input[type="submit"], #payment_method_form input[type="submit"] {
     text-align: center;
     line-height: 29px;
     height: 48px;
@@ -78,7 +81,10 @@
     color: #FFFFFF;
     margin-top: 11px;
   }
-  #login_title {
+  #payment_method_form input[type="submit"] {
+    background: forestgreen;
+  }
+  #login_title, #payment_method_title {
     text-align: center;
     
   }
@@ -313,12 +319,15 @@
   }
   form label {
     display: inline-block;
-    width: 150px;
     vertical-align: top;
     line-height: 25px;
     margin-top: 10px;
     font-size: 3.5vh;
   }
+  .form-check-label {
+    width: 120px;
+  }
+
   form #submit {
     margin-left: 150px;
   }
