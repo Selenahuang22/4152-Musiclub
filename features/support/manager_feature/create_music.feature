@@ -6,7 +6,7 @@ Feature: Musiclub manager adds new music into music repository
 # Access creation page to add new music
 Scenario: go to new music creation page
   Given I am on the Musiclub home page
-  When I follow "Add new music"
+  When I follow "New music"
   Then I go to the create page
 
 # Add music based on information provided

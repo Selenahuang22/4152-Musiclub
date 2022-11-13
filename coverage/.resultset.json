@@ -131,7 +131,7 @@
   },
   "Cucumber Features": {
     "coverage": {
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/environment.rb": {
+      "/mnt/d/Github/4152-Musiclub/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -140,7 +140,7 @@
           1
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/application.rb": {
+      "/mnt/d/Github/4152-Musiclub/config/application.rb": {
         "lines": [
           1,
           null,
@@ -213,7 +213,7 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/boot.rb": {
+      "/mnt/d/Github/4152-Musiclub/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -223,7 +223,7 @@
           1
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/environments/test.rb": {
+      "/mnt/d/Github/4152-Musiclub/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -268,7 +268,7 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/initializers/backtrace_silencers.rb": {
+      "/mnt/d/Github/4152-Musiclub/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -279,7 +279,7 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/initializers/inflections.rb": {
+      "/mnt/d/Github/4152-Musiclub/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -293,7 +293,7 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/initializers/mime_types.rb": {
+      "/mnt/d/Github/4152-Musiclub/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -302,7 +302,7 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/initializers/session_store.rb": {
+      "/mnt/d/Github/4152-Musiclub/config/initializers/session_store.rb": {
         "lines": [
           null,
           null,
@@ -314,7 +314,7 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/initializers/wrap_parameters.rb": {
+      "/mnt/d/Github/4152-Musiclub/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -332,7 +332,7 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/spec/factories/music_factory.rb": {
+      "/mnt/d/Github/4152-Musiclub/spec/factories/music_factory.rb": {
         "lines": [
           1,
           1,
@@ -345,7 +345,7 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/config/routes.rb": {
+      "/mnt/d/Github/4152-Musiclub/config/routes.rb": {
         "lines": [
           1,
           1,
@@ -354,7 +354,7 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/features/support/selectors.rb": {
+      "/mnt/d/Github/4152-Musiclub/features/support/selectors.rb": {
         "lines": [
           null,
           null,
@@ -402,7 +402,7 @@
           1
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/features/support/paths.rb": {
+      "/mnt/d/Github/4152-Musiclub/features/support/paths.rb": {
         "lines": [
           null,
           null,
@@ -445,7 +445,7 @@
           1
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/features/step_definitions/music_steps.rb": {
+      "/mnt/d/Github/4152-Musiclub/features/step_definitions/music_steps.rb": {
         "lines": [
           null,
           null,
@@ -521,7 +521,7 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/features/step_definitions/web_steps.rb": {
+      "/mnt/d/Github/4152-Musiclub/features/step_definitions/web_steps.rb": {
         "lines": [
           null,
           null,
@@ -721,7 +721,7 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/models/music.rb": {
+      "/mnt/d/Github/4152-Musiclub/app/models/music.rb": {
         "lines": [
           1,
           null,
@@ -742,7 +742,7 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/controllers/musics_controller.rb": {
+      "/mnt/d/Github/4152-Musiclub/app/controllers/musics_controller.rb": {
         "lines": [
           1,
           1,
@@ -821,7 +821,7 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/controllers/application_controller.rb": {
+      "/mnt/d/Github/4152-Musiclub/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
@@ -830,13 +830,13 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/helpers/application_helper.rb": {
+      "/mnt/d/Github/4152-Musiclub/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/helpers/musics_helper.rb": {
+      "/mnt/d/Github/4152-Musiclub/app/helpers/musics_helper.rb": {
         "lines": [
           1,
           null,
@@ -847,6 +847,6 @@
         ]
       }
     },
-    "timestamp": 1667444510
+    "timestamp": 1668349948
   }
 }

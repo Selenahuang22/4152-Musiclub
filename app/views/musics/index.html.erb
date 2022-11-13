@@ -24,6 +24,11 @@
       <th>
        Singer
       </th>
+      <th>
+        <%= link_to 'Release Date',
+              musics_path({sort_by: 'release_date', categories: @categories_to_show_hash}),
+              id: 'release_date_header', class: ('bg-warning hilite' if @sort_by == 'release_date') %>
+      </th>
       <th>Operations</th>
     </tr>
   </thead>
@@ -38,6 +43,9 @@
         </td>
         <td>
           <%= music.singer %>
+        </td>
+        <td>
+          <%= music.release_date %>
         </td>
         <td id="operations">
           <%= link_to 'Edit', edit_music_path(music), class: 'small_link_button', id: 'edit_button' %>

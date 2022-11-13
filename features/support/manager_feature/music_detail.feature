@@ -23,7 +23,7 @@ Background: music have been added to database
 # Update the information for a specific music
 Scenario: go to new music details page and edit music
   Given I am on the Musiclub home page
-  When I follow "More about Shake it Off"
+  When I follow "Shake it Off"
   Then I should see "Details about Shake it Off"
   And I follow "Edit"
   Then I should see "Edit Existing Music"
@@ -31,10 +31,13 @@ Scenario: go to new music details page and edit music
   And I press "Update Music Info"
   Then I should see "A new description version of Shake it Off"
 
+#TODO: Scenario: edit a music on the home page
+#TODO: Scenario: delete a music on the home page 
+
 # Edge case: cancel updating
 Scenario: go back to the home page
   Given I am on the Musiclub home page
-  When I follow "More about Shake it Off"
+  When I follow "Shake it Off"
   Then I should see "Details about Shake it Off"
   And I follow "Back to music list"
   Then I am on the Musiclub home page
@@ -43,7 +46,7 @@ Scenario: go back to the home page
 Scenario: delete a music form Musiclub
   Given I am on the Musiclub home page
   And I should see "Shake it Off"
-  When I follow "More about Shake it Off"
+  When I follow "Shake it Off"
   Then I should see "Details about Shake it Off"
   And I follow "Delete"
   Then I am on the Musiclub home page
