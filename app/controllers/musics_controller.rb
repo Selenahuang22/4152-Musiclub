@@ -1,5 +1,5 @@
 class MusicsController < ApplicationController
-  before_action :check_login, except:[:show]
+  before_action :check_login
   before_action :force_index_redirect, only: [:index]
 
   def show

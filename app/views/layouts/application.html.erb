@@ -16,7 +16,11 @@
        
       <div id="curr_user">
         <% if @current_user %>
-          <img src="/images/OIP.jpg" />
+          <% if @current_user.admin %>
+            <img src="/images/admin.png" />
+          <% else %>
+            <img src="/images/OIP.jpg" />
+          <% end %>
           <%= link_to @current_user.name, '#' %>
         <% else %>
         <% end %>
@@ -25,12 +29,15 @@
       <% if !@current_user.nil?%>
         <div id="home"><%= link_to 'Home', musics_path %></div>
 
-        <div id="my_lib"><%= link_to 'My Library', download_index_path %></div>
-        <div id="my_favorite"><%= link_to 'My Favorite', favorite_index_path %></div>
-
+        <% if @current_user.admin %>
+          <div id="add_music"><%= link_to 'New music', new_music_path %></div>
+          <div id="logout"><%= link_to 'Log Out', '/logout', method:'delete' %></div>
+        <% else %>
+          <div id="my_lib"><%= link_to 'My Library', download_index_path %></div>
+          <div id="my_favorite"><%= link_to 'My Favorite', favorite_index_path %></div>
+          <div id="logout"><%= link_to 'Log Out', '/logout', method:'delete' %></div>
+        <% end %>
         
-        <div id="add_music"><%= link_to 'New music', new_music_path %></div>
-        <div id="logout"><%= link_to 'Log Out', '/logout', method:'delete' %></div>
       <% end %>
       
       

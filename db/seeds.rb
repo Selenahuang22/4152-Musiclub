@@ -47,23 +47,25 @@ end
 
 
 accounts = [
-  {name: 'James', email: 'james@gmail.com', password: 'James12345678'},
-  {name: 'Alice', email: 'Alice@gmail.com', password: 'Alice12345678'},
-  {name: 'Kris', email: 'Kris@gmail.com', password: 'Kris12345678'},
-  {name: 'Slena', email: 'Slena@gmail.com', password: 'Slena12345678'},
-  {name: 'John', email: 'John@gmail.com', password: 'John12345678'},
-  {name: 'Len', email: 'Len@gmail.com', password: 'Len12345678'},
-  {name: 'Tony', email: 'Tony@gmail.com', password: 'Tony12345678'},
-  {name: 'Bob', email: 'Bob@gmail.com', password: 'Bob12345678'},
-  {name: 'Avil', email: 'Avil@gmail.com', password: 'Avil12345678'},
-  {name: 'Chen', email: 'Chen@gmail.com', password: 'Chen12345678'},
-  {name: 'Winnie', email: 'Winnie@gmail.com', password: 'Winnie12345678'},
-  {name: 'Yuan', email: 'Yuan@gmail.com', password: 'Yuan12345678'},
-  {name: 'Angel', email: 'Angel@gmail.com', password: 'Angel12345678'},
-  {name: 'Kit', email: 'Kit@gmail.com', password: 'Kit12345678'},
-  {name: 'Tian', email: 'Tian@gmail.com', password: 'Tian12345678'},
-  {name: 'Tom', email: 'Tom@gmail.com', password: 'Tom12345678'},
-  {name: 'Jerry', email: 'Jerry@gmail.com', password: 'Jerry12345678'},
+  {name: 'Admin', email: 'admin@musiclub.com', password: 'Admin', admin: true},
+
+  {name: 'James', email: 'james@gmail.com', password: 'James12345678', admin: false},
+  {name: 'Alice', email: 'Alice@gmail.com', password: 'Alice12345678', admin: false},
+  {name: 'Kris', email: 'Kris@gmail.com', password: 'Kris12345678', admin: false},
+  {name: 'Slena', email: 'Slena@gmail.com', password: 'Slena12345678', admin: false},
+  {name: 'John', email: 'John@gmail.com', password: 'John12345678', admin: false},
+  {name: 'Len', email: 'Len@gmail.com', password: 'Len12345678', admin: false},
+  {name: 'Tony', email: 'Tony@gmail.com', password: 'Tony12345678', admin: false},
+  {name: 'Bob', email: 'Bob@gmail.com', password: 'Bob12345678', admin: false},
+  {name: 'Avil', email: 'Avil@gmail.com', password: 'Avil12345678', admin: false},
+  {name: 'Chen', email: 'Chen@gmail.com', password: 'Chen12345678', admin: false},
+  {name: 'Winnie', email: 'Winnie@gmail.com', password: 'Winnie12345678', admin: false},
+  {name: 'Yuan', email: 'Yuan@gmail.com', password: 'Yuan12345678', admin: false},
+  {name: 'Angel', email: 'Angel@gmail.com', password: 'Angel12345678', admin: false},
+  {name: 'Kit', email: 'Kit@gmail.com', password: 'Kit12345678', admin: false},
+  {name: 'Tian', email: 'Tian@gmail.com', password: 'Tian12345678', admin: false},
+  {name: 'Tom', email: 'Tom@gmail.com', password: 'Tom12345678', admin: false},
+  {name: 'Jerry', email: 'Jerry@gmail.com', password: 'Jerry12345678', admin: false},
 ]
 
 accounts.each do |account|
