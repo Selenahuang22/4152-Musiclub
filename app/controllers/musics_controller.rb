@@ -22,8 +22,12 @@ class MusicsController < ApplicationController
   end
 
   def create
-    @music = Music.create!(music_params)
-    flash[:notice] = "#{@music.title} was successfully created."
+    if !(params[:music]['title']=="" || params[:music]['description']=="" || params[:music]['singer']=="")
+      @music = Music.create!(music_params)
+      flash[:notice] = "#{@music.title} was successfully created."
+    else
+      flash[:notice] = "One or more information of the new song weren't filled, creation failed"
+    end
     redirect_to musics_path
   end
 
