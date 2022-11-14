@@ -1,4 +1,11 @@
-class Music < ActiveRecord::Base
+class Music < ApplicationRecord
+
+  has_many :libraries
+  has_many :favorite_carts
+
+  has_many :dl_musics, through: :libraries, source: :account
+  has_many :fv_musics, through: :libraries, source: :account
+
 
   def self.all_categories
     ['rock', 'country', 'pop', 'blues', 'classical', 'jazz']

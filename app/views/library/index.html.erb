@@ -4,51 +4,22 @@
 
 <div id="all_musics">
   <!-- TODO: for every music in this user library -->
-    <div class="music">
-      <img src="/images/music_icon.png" />
-      <br/>
-      <%= link_to "Test music", '#' %> <!-- TODO：redirect to this music page:show.html.erb -->
-      <p>Singer</p> 
-      <%= link_to 'Remove from library', '#', class: 'library_link_button', id: 'remove_button' %>
-      <%= link_to 'Download', '#', class: 'library_link_button', id: 'download_button' %>
-    </div>
-    
-    <!-- 下面是测试数据，后端写好删掉 -->
-    <div class="music">
-      <img src="/images/music_icon.png" />
-      <br/>
-      <%= link_to "Test music", '#' %>
-      <p>Singer</p>
-      <%= link_to 'Remove from library', '#', class: 'library_link_button', id: 'remove_button' %>
-      <%= link_to 'Download', '#', class: 'library_link_button', id: 'download_button' %>
-    </div>
 
-    <div class="music">
-      <img src="/images/music_icon.png" />
-      <br/>
-      <%= link_to "Test music", '#' %>
-      <p>Singer</p>
-      <%= link_to 'Remove from library', '#', class: 'library_link_button', id: 'remove_button' %>
-      <%= link_to 'Download', '#', class: 'library_link_button', id: 'download_button' %>
-    </div>
 
-    <div class="music">
-      <img src="/images/music_icon.png" />
-      <br/>
-      <%= link_to "Test music", '#' %>
-      <p>Singer</p>
-      <%= link_to 'Remove from library', '#', class: 'library_link_button', id: 'remove_button' %>
-      <%= link_to 'Download', '#', class: 'library_link_button', id: 'download_button' %>
-    </div>
+    <% @library_musics.each do |music| %>
 
-    <div class="music">
-      <img src="/images/music_icon.png" />
-      <br/>
-      <%= link_to "Test music", '#' %>
-      <p>Singer</p>
-      <%= link_to 'Remove from library', '#', class: 'library_link_button', id: 'remove_button' %>
-      <%= link_to 'Download', '#', class: 'library_link_button', id: 'download_button' %>
-    </div>
+        <div class="music">
+            <img src="/images/music_icon.png" />
+            <br/>
+            <%= link_to "#{music.title}", music_path(music) %>
+            <%= music.singer %>
+            <%= music.release_date %>
+            <%= link_to 'Back to Musiclub', musics_path, class: 'library_link_button', id: 'download_button' %>
+            <%= link_to 'Delete', download_remove_music_path(music), class: 'small_link_button', id: 'remove_button' %>
+        </div>
+
+    <% end %>
+
 </div>
 
 

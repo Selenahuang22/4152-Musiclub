@@ -12,7 +12,7 @@ class AccountsController < ApplicationController
       if account.password == password_html
         session[:account_id] = account.id
         flash.notice = "Login！"
-        redirect_to :root
+        redirect_to musics_path
       else
         flash.notice = "Invalid user or password!"
         render :login
@@ -27,7 +27,7 @@ class AccountsController < ApplicationController
 
   def logout
     session[:account_id] = nil
-    redirect_to :root
+    redirect_to login_path
   end
   
 end

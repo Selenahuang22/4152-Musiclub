@@ -1,0 +1,26 @@
+<h2 id="lib_header1">Current User's Favorite List</h2> 
+<h3 id="lib_header2">Download or manage your chosen titles below</h3>
+
+
+<div id="all_musics">
+  <!-- TODO: for every music in this user library -->
+
+    <% @favorite_musics.each do |music| %>
+
+        <div class="music">
+            <img src="/images/music_icon.png" />
+            <br/>
+            <%= link_to "#{music.title}", music_path(music) %>
+            <%= music.singer %>
+            <%= music.release_date %>
+            <%= link_to 'Download', download_music_path(music), class: 'library_link_button', id: 'download_button' %>
+            <%= link_to 'Remove', favorite_remove_music_path(music), class: 'library_link_button', id: 'remove_button' %>
+            <%= link_to 'Back to Musiclub', musics_path, class: 'library_link_button', id: 'download_button' %>
+        </div>
+
+
+    <% end %>
+
+</div>
+
+

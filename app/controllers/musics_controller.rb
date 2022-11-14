@@ -1,5 +1,5 @@
 class MusicsController < ApplicationController
-  before_action :check_login, only:[:index]
+  before_action :check_login, except:[:show]
   before_action :force_index_redirect, only: [:index]
 
   def show
@@ -27,7 +27,7 @@ class MusicsController < ApplicationController
     redirect_to musics_path
   end
 
-  def edit
+  def edit 
     @music = Music.find params[:id]
   end
 
@@ -43,6 +43,31 @@ class MusicsController < ApplicationController
     @music.destroy
     flash[:notice] = "Music '#{@music.title}' deleted."
     redirect_to musics_path
+  end
+
+  def download
+    @music = Music.find params[:format]
+    @current_user.musics_download << @music
+    redirect_to download_index_path, notice: "#{@music.title} has been downloaded to your download library"
+  end
+
+  def download_remove
+    @music = Music.find params[:format]
+    @current_user.musics_download.delete(@music)
+    redirect_to download_index_path, notice: "#{@music.title} has been removed from your downloading library"
+  end
+
+
+  def favorite
+    @music = Music.find params[:format]
+    @current_user.musics_favorite << @music
+    redirect_to favorite_index_path, notice: "#{@music.title} has been added to your favorite"
+  end
+
+  def favorite_remove
+    @music = Music.find params[:format]
+    @current_user.musics_favorite.delete(@music)
+    redirect_to favorite_index_path, notice: "#{@music.title} has been removed from your favorite"
   end
 
   private

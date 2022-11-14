@@ -24,6 +24,7 @@
 <div class="row">
   <%= link_to 'Edit', edit_music_path(@music), class: 'link_button', id: 'edit_button' %>
   <%= link_to 'Delete', music_path(@music), 'data-method': 'delete', 'data-confirm': 'Are you sure?', class: 'link_button' %>
-  <%= link_to 'Add to library', '#', class:"link_button" %>
+  <%= link_to 'Download', download_music_path(@music), class:"link_button" %>
+  <%= link_to 'Favorite', favorite_music_path(@music), class:"link_button" %>
   <%= link_to 'Back to music list', musics_path, class: 'link_button', id: 'back_button' %>
 </div>
