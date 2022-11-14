@@ -24,11 +24,8 @@
 
       <% if !@current_user.nil?%>
         <div id="home"><%= link_to 'Home', musics_path %></div>
-
         <div id="my_lib"><%= link_to 'My Library', download_index_path %></div>
         <div id="my_favorite"><%= link_to 'My Favorite', favorite_index_path %></div>
-
-        
         <div id="add_music"><%= link_to 'New music', new_music_path %></div>
         <div id="logout"><%= link_to 'Log Out', '/logout', method:'delete' %></div>
       <% end %>
