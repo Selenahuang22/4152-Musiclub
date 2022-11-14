@@ -8,4 +8,8 @@ class CreateAccounts < ActiveRecord::Migration
       t.timestamps null: false
     end
   end
+
+  def down
+    drop_table :accounts
+  end
 end

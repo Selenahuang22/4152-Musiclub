@@ -30,3 +30,7 @@ accounts = [
   {name: 'James', email: 'james@gmail.com', password: 'James12345678'},
   {name: 'Alice', email: 'Alice@gmail.com', password: 'Alice12345678'},
 ]
+
+accounts.each do |account|
+  Account.create!(account)
+end

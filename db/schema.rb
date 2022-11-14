@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20221026183845) do
+ActiveRecord::Schema.define(version: 20221114001240) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "musics", force: :cascade do |t|
     t.string   "title"
@@ -19,6 +27,15 @@ ActiveRecord::Schema.define(version: 20221026183845) do
     t.string   "singer"
     t.text     "description"
     t.datetime "release_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "music_title"
+    t.string   "user_email"
+    t.integer  "status"
+    t.string   "price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
