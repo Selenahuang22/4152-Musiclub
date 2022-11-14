@@ -3,7 +3,6 @@
 
 
 <div id="all_musics">
-  <!-- TODO: for every music in this user library -->
 
     <% @favorite_musics.each do |music| %>
 
@@ -11,11 +10,14 @@
             <img src="/images/music_icon.png" />
             <br/>
             <%= link_to "#{music.title}", music_path(music) %>
+            <br/>
             <%= music.singer %>
+            <br/>
             <%= music.release_date %>
+            <br/>
             <%= link_to 'Download', download_music_path(music), class: 'library_link_button', id: 'download_button' %>
             <%= link_to 'Remove', favorite_remove_music_path(music), class: 'library_link_button', id: 'remove_button' %>
-            <%= link_to 'Back to Musiclub', musics_path, class: 'library_link_button', id: 'download_button' %>
+            <%= link_to 'Back to Musiclub', musics_path, class: 'library_link_button', id: 'back_button' %>
         </div>
 
 

@@ -11,7 +11,7 @@ class AccountsController < ApplicationController
     if account
       if account.password == password_html
         session[:account_id] = account.id
-        flash.notice = "Login！"
+        flash.notice = "Login successfully!"
         redirect_to musics_path
       else
         flash.notice = "Invalid user or password!"
