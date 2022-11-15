@@ -21,7 +21,8 @@
         </th>
         <th>Category</th>
         <th>
-        Singer
+        <%= link_to 'Singer', musics_path({sort_by: 'singer', categories: @categories_to_show_hash}),
+                      id: 'singer_header', class: ('bg-warning hilite' if @sort_by == 'singer') %>
         </th>
         <th>
           <%= link_to 'Release Date',
