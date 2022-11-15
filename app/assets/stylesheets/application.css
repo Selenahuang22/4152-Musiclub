@@ -232,6 +232,15 @@
     background-color: green;
     color: white;
   }
+  #download_invalid_button {
+    background-color: grey;
+    color: white;
+  }
+  #favorite_invalid_button {
+    background-color: grey;
+    color: white;
+  }
+  
   .music {
     flex: 0 0 24%;
     line-height: 30px;
