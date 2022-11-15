@@ -1,24 +1,15 @@
 Feature: client login and logout
 
+# Basic Function for a client:
+# before entering the main page, login first
+# I expect to successfully log in if I input the corrent email and password, and I should not log in if I am not in the exisiting user list or I input a wrong password
+
 Background: accounts have been added to database
 
   Given the following account exist
-  | name          | email              | password        |
-  | Harrison      | harrison@gmail.com | harrison123456  |
-  | Jack          | jack@gmail.com     | jack123456      | 
-  | Noora         | noora@gmail.com    | noora123456     | 
-  | Holy          | holy@gmail.com     | holy123456      | 
-  | Marrisa       | marrisa@gmail.com  | marrisa123456   |
-  | Du            | du@gmail.com       | du123456        | 
-  | Toxic         | toxic@gmail.com    | toxic123456     |  
-  | Fun           | fun@gmail.com      | fun123456       | 
-  | Silvia        | silvia@gmail.com   | silvia123456    | 
-  | Henry         | henry@gmail.com    | henry123456     | 
-  | Jia           | jia@gmail.com      | jia123456       | 
-  | Yuhao         | yuhao@gmail.com    | yuhao123456     | 
-  | Lisa          | lisa@gmail.com     | lisa123456      | 
-  | Boyu          | boyu@gmail.com     | boyu123456      | 
-  | Alexander     | alexander@gmail.com| alexander123456 | 
+  | name          | email              | password        | admin |
+  | Harrison      | harrison@gmail.com | harrison123456  | false |
+  | Jack          | jack@gmail.com     | jack123456      | false |
 
 
 Scenario: login with correct password and email

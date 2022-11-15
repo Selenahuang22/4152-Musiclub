@@ -16,9 +16,19 @@ Background: music have been added to database
   | You Proof               | country   | 13-May-2022  |  Morgan Wallen     |
   | Toxic                   | pop       | 13-Jan-2004  |  Britney Spears    |
   | Rolling in the Deep     | pop       | 26-Sep-2011  |  Adele             |
-  
-  And  I am on the Musiclub home page
-  Then 9 seed music should exist
+
+
+  Given the following account exist
+  | name          | email              | password        | admin |
+  | Admin         | admin@musiclub.com | Admin           | true  |
+  | Jack          | jack@gmail.com     | jack123456      | false |
+
+  Given I am on the login page
+  When I fill in "user[email]" with "admin@musiclub.com"
+  And I fill in "password" with "Admin"
+  And I press "Login"
+  Then I am on the Musiclub home page
+  And 9 seed music should exist
 
 # Update the information for a specific music
 Scenario: go to new music details page and edit music

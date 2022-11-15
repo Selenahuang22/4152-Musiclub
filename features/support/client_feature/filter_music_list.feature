@@ -18,8 +18,16 @@ Background: music have been added to database
   | Toxic                   | pop       | 13-Jan-2004  |  Britney Spears    |
   | Rolling in the Deep     | pop       | 26-Sep-2011  |  Adele             |
   
-  And  I am on the Musiclub home page
-  Then 9 seed music should exist
+  Given the following account exist
+  | name          | email              | password        | admin |
+  | Admin         | admin@musiclub.com | Admin           | true  |
+  | Jack          | jack@gmail.com     | jack123456      | false |
+
+  Given I am on the login page
+  When I fill in "user[email]" with "jack@gmail.com"
+  And I fill in "password" with "jack123456"
+  And I press "Login"
+  Then I am on the Musiclub home page
 
 # filter by categories
 Scenario: restrict to musics with "rock" or "pop" categories

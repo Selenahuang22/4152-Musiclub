@@ -17,6 +17,9 @@ module NavigationHelpers
     when /^the musics page$/ then '/musics'
     when /^the create page$/ then '/musics/new'
     when /^the login page$/ then '/'
+    when /^my download library page$/ then '/download_index'
+    when /^my favorite page$/ then '/favorite_index'
+    
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
