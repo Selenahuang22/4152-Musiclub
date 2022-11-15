@@ -15,4 +15,9 @@ Musiclub::Application.routes.draw do
   get 'download_index' => 'library#index'
   get 'favorite_index' => 'favorite_cart#index'
 
+  get 'payment' => 'musics#payment'
+
+  get 'payment_index' => 'payment#index'
+  post 'create_payment' => 'payment#create_payment'
+
 end

@@ -16,7 +16,7 @@
             <%= music.release_date %>
             <br/>
               <% if !@current_user.musics_download.include? music %>
-                <%= link_to 'Download', download_music_path(music), class: 'library_link_button', id: 'download_button' %>
+                <%= link_to 'Download', payment_path(music), class: 'library_link_button', id: 'download_button' %>
               <% else %>
                 <%= link_to 'Download', '#', class: 'library_link_button', id: 'download_invalid_button' %>
               <% end %>

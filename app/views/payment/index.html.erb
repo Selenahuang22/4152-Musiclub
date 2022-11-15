@@ -1,6 +1,6 @@
 <h2 id="payment_method_title">Payment Methods</h2>
 
-<%= form_tag '#', class: 'form', id: "payment_method_form" do %>
+<%= form_tag '/create_payment', class: 'form', id: "payment_method_form" do %>
   <%= label :payment, :card_number, 'Card Number', class: 'col-form-label' %>
   <%= text_field :payment, :card_number, class: 'form-control' %>
   <%= label :payment, :expiration_date, 'Expiration Date', class: 'col-form-label' %>

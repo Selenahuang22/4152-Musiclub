@@ -55,6 +55,7 @@ class MusicsController < ApplicationController
     redirect_to download_index_path, notice: "#{@music.title} has been downloaded to your download library"
   end
 
+
   def download_remove
     @music = Music.find params[:format]
     @current_user.musics_download.delete(@music)
@@ -72,6 +73,12 @@ class MusicsController < ApplicationController
     @music = Music.find params[:format]
     @current_user.musics_favorite.delete(@music)
     redirect_to favorite_index_path, notice: "#{@music.title} has been removed from your favorite"
+  end
+
+  def payment
+    @music = Music.find params[:format]
+    @current_user.musics_download << @music
+    redirect_to payment_index_path
   end
 
   private
