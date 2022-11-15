@@ -1,6 +1,6 @@
 Feature: display list of musics filtered by a specific category or a specific singer
 
-# Basic Function 1 for a client:
+# Basic Function 1 for a client and an admin:
 # when browsing music on the homepage,
 # I expect to filter the music list based on my preferred features, like music cateogories, singers, etc.
 
@@ -28,6 +28,14 @@ Background: music have been added to database
   And I fill in "password" with "jack123456"
   And I press "Login"
   Then I am on the Musiclub home page
+  And 9 seed music should exist
+
+  Given I am on the login page
+  When I fill in "user[email]" with "admin@musiclub.com"
+  And I fill in "password" with "Admin"
+  And I press "Login"
+  Then I am on the Musiclub home page
+  And 9 seed music should exist
 
 # filter by categories
 Scenario: restrict to musics with "rock" or "pop" categories

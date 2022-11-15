@@ -68,3 +68,11 @@ Scenario: cancel creating new music
   Given I am on the create page
   When I follow "Cancel"
   Then I am on the Musiclub home page 
+
+Scenario: back home pressing Home button
+  When I follow "Home"
+  Then I am on the Musiclub home page
+
+Scenario: back home pressing Musiclub button
+  When I follow "Musiclub"
+  Then I am on the Musiclub home page

@@ -1,7 +1,7 @@
-Feature: Musiclub manager see music information and is able to edit or delete it from music detail page
+Feature: Musiclub manager and client see music information
 
 # Basic function 2: 
-# A manager can update music's information in music details page. He may also remove a music from music board if the song has some problems or Musiclub has no copyrights for the song anymore.
+# A manager and a client can see music information of a specific music.
 
 Background: music have been added to database
 
@@ -24,38 +24,39 @@ Background: music have been added to database
   | Jack          | jack@gmail.com     | jack123456      | false |
 
   Given I am on the login page
+  When I fill in "user[email]" with "jack@gmail.com"
+  And I fill in "password" with "jack123456"
+  And I press "Login"
+  Then I am on the Musiclub home page
+  And 9 seed music should exist
+
+  Given I am on the login page
   When I fill in "user[email]" with "admin@musiclub.com"
   And I fill in "password" with "Admin"
   And I press "Login"
   Then I am on the Musiclub home page
   And 9 seed music should exist
 
-# Update the information for a specific music
-Scenario: go to new music details page and edit music
+Scenario: see details of a specific music
   Given I am on the Musiclub home page
   When I follow "Shake it Off"
   Then I should see "Details about Shake it Off"
-  And I follow "Edit"
-  Then I should see "Edit Existing Music"
-  When I fill in "music[description]" with "A new description version of Shake it Off"
-  And I press "Update Music Info"
-  Then I should see "A new description version of Shake it Off"
-
-
-# Edge case: cancel updating
-Scenario: go back to the home page
-  Given I am on the Musiclub home page
-  When I follow "Shake it Off"
-  Then I should see "Details about Shake it Off"
-  And I follow "Back to music list"
+  And I should see "Taylor Swift"
+  When I follow "Home"
   Then I am on the Musiclub home page
-
-# Remove a music from music board
-Scenario: delete a music form Musiclub
-  Given I am on the Musiclub home page
-  And I should see "Shake it Off"
-  When I follow "Shake it Off"
-  Then I should see "Details about Shake it Off"
-  And I follow "Delete"
+  When I follow "Rolling in the Deep"
+  Then I should see "Details about Rolling in the Deep"
+  And I should see "Adele"
+  When I follow "Home"
   Then I am on the Musiclub home page
-  And I should not see "Shake it Off"
+  When I follow "So What"
+  Then I should see "Details about So What"
+  And I should see "Miles Davis"
+
+Scenario: back home pressing Home button
+    When I follow "Home"
+    Then I am on the Musiclub home page
+
+Scenario: back home pressing Musiclub button
+    When I follow "Musiclub"
+    Then I am on the Musiclub home page

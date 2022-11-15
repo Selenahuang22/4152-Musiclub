@@ -41,6 +41,27 @@ Scenario: directly go to my download music library
     Then I am on my download library page
     And I should see "Downloaded Music Library"
 
+Scenario: back to home page when click button from my library
+    When I follow "Download"
+    Then I am on my download library page
+    And I should see "Born to Run"
+    When I follow "Back to Musiclub"
+    Then I am on the Musiclub home page 
+
+Scenario: remove a music from my library
+    When I follow "Download"
+    Then I am on my download library page
+    And I should see "Born to Run"
+    Then I follow "Delete"
+    And I should see "Born to Run has been removed from your downloading library"
+
+
+Scenario: back home pressing Musiclub button
+    Given I am on my download library page
+    When I follow "Musiclub"
+    Then I am on the Musiclub home page
+
+
 # Scenario: Add payment method
 
 # Potential Scenario: comment on music

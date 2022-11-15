@@ -57,6 +57,13 @@ Scenario: directly go to my favorite music library
     Then I am on my favorite page
     And I should see "Your Favorite List"
 
+Scenario: back home pressing Home button
+    When I follow "Home"
+    Then I am on the Musiclub home page
+
+Scenario: back home pressing Musiclub button
+    When I follow "Musiclub"
+    Then I am on the Musiclub home page
 
 
 
