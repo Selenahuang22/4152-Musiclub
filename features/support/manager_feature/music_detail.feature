@@ -1,4 +1,4 @@
-Feature: Musiclub manager changes music information or delete a music
+Feature: Musiclub manager see music information and is able to edit or delete it from music detail page
 
 # Basic function 2: 
 # A manager can update music's information in music details page. He may also remove a music from music board if the song has some problems or Musiclub has no copyrights for the song anymore.
@@ -41,8 +41,6 @@ Scenario: go to new music details page and edit music
   And I press "Update Music Info"
   Then I should see "A new description version of Shake it Off"
 
-#TODO: Scenario: edit a music on the home page
-#TODO: Scenario: delete a music on the home page 
 
 # Edge case: cancel updating
 Scenario: go back to the home page
