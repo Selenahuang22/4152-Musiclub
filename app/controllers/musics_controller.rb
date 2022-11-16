@@ -75,11 +75,10 @@ class MusicsController < ApplicationController
     redirect_to favorite_index_path, notice: "#{@music.title} has been removed from your favorite"
   end
 
-  def payment
-    @music = Music.find params[:format]
-    @current_user.musics_download << @music
-    redirect_to payment_index_path
-  end
+  # def payment
+  #   @music = Music.find params[:format]
+  #   redirect_to payment_index_path(@music)
+  # end
 
   private
 
