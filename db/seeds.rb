@@ -39,6 +39,14 @@ musics = [
   { title: 'Tom Rushen Blues', category: 'blues', release_date: '20-May-1997', singer: 'Charley Patton', description: "Famous blues music by Charley Patton" },
   { title: 'Black Night', category: 'blues', release_date: '20-Oct-1991', singer: 'Charles Brown', description: "Famous blues music by Charles Brown" },
   { title: 'Still a Fool', category: 'blues', release_date: '20-May-1999', singer: 'Muddy Waters', description: "Famous blues music by Muddy Waters" },
+  { title: 'Girlfriend', category: 'rock', release_date: '14-Feb-2005', singer: 'Avril Lavigne', description: "Famous rock music by Avril Lavigne" },
+  { title: '22', category: 'country', release_date: '13-Mar-2013', singer: 'Taylor Swift', description: "22 by Taylor Swift" },
+  { title: 'I Knew You Were Trouble', category: 'pop', release_date: '09-Oct-2012', singer: 'Taylor Swift', description: "I Knew You Were Trouble by Taylor Swift" },
+  { title: 'We Are Never Ever Getting Back Together', category: 'pop', release_date: '13-Aug-2012', singer: 'Taylor Swift', description: "We Are Never Ever Getting Back Together by Taylor Swift" },
+  { title: 'Faded', category: 'pop', release_date: '04-Dec-2015', singer: 'Alan Walker', description: "Faded by Alan Walker" },
+  { title: 'Symphony No.41 in C, K551 - Jupiter', category: 'classical', release_date: '02-Jan-1787', singer: 'Mozart', description: "Famous classical music by Mozart" },
+  { title: 'Requiem Mass in D minor, K626', category: 'classical', release_date: '02-Jan-1788', singer: 'Mozart', description: "Famous classical music by Mozart" },
+  { title: 'Quintet in A for Clarinet and Strings, K581', category: 'classical', release_date: '02-Mar-1789', singer: 'Mozart', description: "Famous classical music by Mozart" },
 ]
 
 musics.each do |music|
