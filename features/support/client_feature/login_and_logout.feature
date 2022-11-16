@@ -1,6 +1,6 @@
 Feature: client login and logout
 
-# Basic Function for a client:
+# Main Function for a client:
 # before entering the main page, login first
 # I expect to successfully log in if I input the corrent email and password, and I should not log in if I am not in the exisiting user list or I input a wrong password
 

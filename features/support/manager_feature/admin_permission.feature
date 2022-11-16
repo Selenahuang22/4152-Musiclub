@@ -36,7 +36,7 @@ Scenario: An admin does not have the downloaded library and favorite list
     Then I should not see "My Library"
     And I should not see "My Favorite"
 
-Scenario: A client cannot download/favorite a music from music detail page either
+Scenario: An admin cannot download/favorite a music from music detail page either
     Given I am on the Musiclub home page
     And I follow "Born to Run"
     Then I should not see "Download"
