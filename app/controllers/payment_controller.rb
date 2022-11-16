@@ -9,13 +9,15 @@ class PaymentController < ApplicationController
 
 
   def create_payment
-    @music = session[:ordered_music]
+    if !@music
+      @music = session[:ordered_music]
+    end
     card_number = params[:payment][:card_number].strip
     expiration_date = params[:payment][:expiration_date].strip
     cvv = params[:payment][:cvv].strip
     holder_name = params[:payment][:holder_name].strip
-    expiration_date_reg = /^((((0[13578])|([13578])|(1[02]))[\/](([1–9])|([0–2][0–9])|(3[01])))|(((0[469])|([469])|(11))[\/](([1–9])|([0–2][0–9])|(30)))|((2|02)[\/](([1–9])|([0–2][0–9]))))[\/]\d{4}$|^\d{4}$/
-    if card_number.length == 16 && expiration_date.length == 7 && cvv.length == 3
+    expiration_date_reg = /^((0[1-9])|(1[0-2]))\/((20[2][2-9]))$/
+    if card_number.length == 16 && expiration_date.match(expiration_date_reg) && expiration_date.length == 7 && cvv.length == 3 && holder_name.length > 0
       @current_user.musics_download << @music
       order = OrderDetail.create(music_id:@music.id, account_id:@current_user.id, status:0, price: '0.00')
       redirect_to download_index_path, notice: "#{@music.title} has been downloaded to your download library"

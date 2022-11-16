@@ -1,28 +1,132 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/helpers/application_helper.rb": {
+      "/home/codio/workspace/4152-Musiclub/app/helpers/accounts_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/helpers/musics_helper.rb": {
+      "/home/codio/workspace/4152-Musiclub/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/4152-Musiclub/app/helpers/musics_helper.rb": {
         "lines": [
           1,
           null,
+          null,
+          null,
           1,
-          0,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          2,
+          1,
+          null,
+          1,
+          null,
+          2,
           null,
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/controllers/musics_controller.rb": {
+      "/home/codio/workspace/4152-Musiclub/app/controllers/accounts_controller.rb": {
         "lines": [
           1,
           1,
           null,
           1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/4152-Musiclub/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          17,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/4152-Musiclub/app/controllers/favorite_cart_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/4152-Musiclub/app/controllers/library_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/4152-Musiclub/app/controllers/musics_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
           1,
           1,
           null,
@@ -42,9 +146,13 @@
           null,
           null,
           1,
+          2,
           1,
           1,
+          null,
           1,
+          null,
+          2,
           null,
           null,
           1,
@@ -66,25 +174,56 @@
           null,
           null,
           1,
-          null,
           1,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
           null,
           null,
           null,
           1,
-          0,
+          1,
+          1,
+          1,
+          null,
           null,
           null,
           1,
-          0,
+          1,
+          1,
+          1,
           null,
           null,
           1,
-          0,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          7,
+          null,
+          null,
+          1,
+          1,
           null,
           null,
           1,
@@ -96,21 +235,103 @@
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/controllers/application_controller.rb": {
+      "/home/codio/workspace/4152-Musiclub/app/controllers/payment_controller.rb": {
         "lines": [
           1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
           null,
           null,
           1,
+          1,
+          0,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
-      "/Users/amayaqing/Desktop/CS4152_SaaS/saas-project/4152-Musiclub/app/models/music.rb": {
+      "/home/codio/workspace/4152-Musiclub/app/models/account.rb": {
         "lines": [
           1,
           null,
           1,
           1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/4152-Musiclub/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/4152-Musiclub/app/models/favorite_cart.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/4152-Musiclub/app/models/library.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/4152-Musiclub/app/models/music.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
           null,
           null,
           1,
@@ -123,11 +344,27 @@
           null,
           null,
           null,
+          null
+        ]
+      },
+      "/home/codio/workspace/4152-Musiclub/app/models/order_detail.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/4152-Musiclub/app/models/order.rb": {
+        "lines": [
+          1,
           null
         ]
       }
     },
-    "timestamp": 1667444516
+    "timestamp": 1668580027
   },
   "Cucumber Features": {
     "coverage": {

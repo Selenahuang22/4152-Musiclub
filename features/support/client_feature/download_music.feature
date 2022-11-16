@@ -23,13 +23,39 @@ Background: music have been added to database
   Then I am on the Musiclub home page
 
 
-Scenario: download a music from the home page
+Scenario: download a music from the home page and make payment successfully
     When I follow "Download"
+    Then I am on payment page
+    And I should see "Payment Methods"
+    When I fill in "Card Number" with "1111222233334444"
+    And I fill in "Expiration Date" with "01/2028"
+    And I fill in "CVV" with "111"
+    And I fill in "Card Holder's Name" with "Alice"
+    And I press "Confirm Payment"
     Then I am on my download library page
     And I should see "Born to Run"
 
+Scenario: download a music from the home page and make payment unsuccessfully
+    When I follow "Download"
+    Then I am on payment page
+    And I should see "Payment Methods"
+    When I fill in "Card Number" with "1111222233334444"
+    And I fill in "Expiration Date" with "01/01/2028"
+    And I fill in "CVV" with "111"
+    And I fill in "Card Holder's Name" with "Alice"
+    And I press "Confirm Payment"
+    Then I am still on payment page
+
+
 Scenario: I cannot repeatedly download a music if I have downloaded it before
     When I follow "Download"
+    Then I am on payment page
+    And I should see "Payment Methods"
+    When I fill in "Card Number" with "1111222233334444"
+    And I fill in "Expiration Date" with "01/2028"
+    And I fill in "CVV" with "111"
+    And I fill in "Card Holder's Name" with "Alice"
+    And I press "Confirm Payment"
     Then I am on my download library page
     And I should see "Born to Run"
     Then I follow "Back to Musiclub"
@@ -43,6 +69,13 @@ Scenario: directly go to my download music library
 
 Scenario: back to home page when click button from my library
     When I follow "Download"
+    Then I am on payment page
+    And I should see "Payment Methods"
+    When I fill in "Card Number" with "1111222233334444"
+    And I fill in "Expiration Date" with "01/2028"
+    And I fill in "CVV" with "111"
+    And I fill in "Card Holder's Name" with "Alice"
+    And I press "Confirm Payment"
     Then I am on my download library page
     And I should see "Born to Run"
     When I follow "Back to Musiclub"
@@ -50,6 +83,13 @@ Scenario: back to home page when click button from my library
 
 Scenario: remove a music from my library
     When I follow "Download"
+    Then I am on payment page
+    And I should see "Payment Methods"
+    When I fill in "Card Number" with "1111222233334444"
+    And I fill in "Expiration Date" with "01/2028"
+    And I fill in "CVV" with "111"
+    And I fill in "Card Holder's Name" with "Alice"
+    And I press "Confirm Payment"
     Then I am on my download library page
     And I should see "Born to Run"
     Then I follow "Delete"
