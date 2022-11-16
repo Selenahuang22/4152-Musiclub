@@ -1,0 +1,26 @@
+<h2 id="lib_header1">Downloaded Music Library</h2> 
+<h3 id="lib_header2">Manage your music below</h3>
+
+
+<div id="all_musics">
+
+    <% @library_musics.each do |music| %>
+
+        <div class="music">
+            <%= link_to image_tag (musicpic(music.singer)) %>
+            <br/>
+            <%= link_to "#{music.title}", music_path(music) %>
+            <br/>
+            <%= music.singer %>
+            <br/>
+            <%= music.release_date %>
+            <br/>
+            <%= link_to 'Back to Musiclub', musics_path, class: 'library_link_button', id: 'back_button' %>
+            <%= link_to 'Delete', download_remove_music_path(music), class: 'library_link_button', id: 'remove_button' %>
+        </div>
+
+    <% end %>
+
+</div>
+
+

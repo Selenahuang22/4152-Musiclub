@@ -1,0 +1,14 @@
+<h2 id="payment_method_title">Payment Methods</h2>
+
+<%= form_tag '/create_payment', class: 'form', id: "payment_method_form" do %>
+  <%= label :payment, :card_number, 'Card Number', class: 'col-form-label' %>
+  <%= text_field :payment, :card_number, class: 'form-control' %>
+  <%= label :payment, :expiration_date, 'Expiration Date', class: 'col-form-label' %>
+  <%= text_field :payment, :expiration_date, class: 'form-control' %>
+  <%= label :payment, :cvv, 'CVV', class: 'col-form-label' %>
+  <%= text_field :payment, :cvv, class: 'form-control' %>
+  <%= label :payment, :holder_name, "Card Holder's Name", class: 'col-form-label' %>
+  <%= text_field :payment, :holder_name, class: 'form-control' %>
+  <br/>
+  <%= submit_tag 'Confirm Payment', class: 'btn btn-primary' %>
+<% end %>

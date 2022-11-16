@@ -1,8 +1,8 @@
-Feature: display list of music sorted by different release_date and name
+Feature: display list of music sorted by different release_date, name and singer
 
 # Basic Function 2 for a client:
 # when browsing music on the homepage,
-# I expect to see the music songs sorted by release date and sorted by name. So it will be easier for (1) those who love old songs or those who love the latest songs to download their favorite, (2) to locate the song I am looking for
+# I expect to see the music songs sorted by release date, name and singer. So it will be easier for (1) those who love old songs or those who love the latest songs to download their favorite, (2) to locate the song I am looking for
 
 Background: music have been added to database
 
@@ -18,8 +18,29 @@ Background: music have been added to database
   | Toxic                   | pop       | 13-Jan-2004  |  Britney Spears    |
   | Rolling in the Deep     | pop       | 26-Sep-2011  |  Adele             |
 
-  And  I am on the Musiclub home page
-  Then 9 seed music should exist
+  Given the following account exist
+  | name          | email              | password        | admin |
+  | Admin         | admin@musiclub.com | Admin           | true  |
+  | Jack          | jack@gmail.com     | jack123456      | false |
+
+  Given I am on the login page
+  When I fill in "user[email]" with "jack@gmail.com"
+  And I fill in "password" with "jack123456"
+  And I press "Login"
+  Then I am on the Musiclub home page
+  And 9 seed music should exist
+
+  Given I am on the login page
+  When I fill in "user[email]" with "admin@musiclub.com"
+  And I fill in "password" with "Admin"
+  And I press "Login"
+  Then I am on the Musiclub home page
+  And 9 seed music should exist
+
+# sort by singer
+Scenario: sort music alphabetically on singer
+  When I follow "Singer"
+  Then I should see "Backroad Therapy" before "Toxic"
 
 # sort by title
 Scenario: sort music alphabetically
@@ -29,10 +50,13 @@ Scenario: sort music alphabetically
 # sort by release date
 Scenario: sort music in increasing order of release date
   When I follow "Release Date"
-  Then I should see "So What" before "Toxic"  
+  Then I should see "So What" before "Toxic" 
 
 
-# TODO in iter 2:
+
+
+
+# TODO in the next iteration:
 
 # Scenario: Add "writing comment" function for clients and the songs can be sorted by the number of comments 
 

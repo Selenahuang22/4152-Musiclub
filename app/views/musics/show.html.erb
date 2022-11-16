@@ -22,7 +22,25 @@
 </p>
 
 <div class="row">
-  <%= link_to 'Edit', edit_music_path(@music), class: 'link_button', id: 'edit_button' %>
-  <%= link_to 'Delete', music_path(@music), 'data-method': 'delete', 'data-confirm': 'Are you sure?', class: 'link_button' %>
+
+  <% if @current_user.admin %>
+    <%= link_to 'Edit', edit_music_path(@music), class: 'link_button', id: 'edit_button' %>
+    <%= link_to 'Delete', music_path(@music), 'data-method': 'delete', 'data-confirm': 'Are you sure?', class: 'link_button' %>
+  <% else %>
+
+    <% if !@current_user.musics_download.include? @music %>
+      <%= link_to 'Download', download_music_path(@music), class: 'link_button', id: 'download_button' %>
+    <% else %>
+      <%= link_to 'Download', '#', class: 'link_button', id: 'download_invalid_button' %>
+    <% end %>
+
+    <% if !@current_user.musics_favorite.include? @music %>
+      <%= link_to 'Favorite', favorite_music_path(@music), class: 'link_button', id: 'favorite_button' %>
+    <% else %>
+      <%= link_to 'Favorite', '#', class: 'link_button', id: 'favorite_invalid_button' %>
+    <% end %>
+
+  <% end %>
   <%= link_to 'Back to music list', musics_path, class: 'link_button', id: 'back_button' %>
+  
 </div>

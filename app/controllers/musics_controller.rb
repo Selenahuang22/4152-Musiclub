@@ -1,4 +1,5 @@
 class MusicsController < ApplicationController
+  before_action :check_login
   before_action :force_index_redirect, only: [:index]
 
   def show
@@ -21,12 +22,16 @@ class MusicsController < ApplicationController
   end
 
   def create
-    @music = Music.create!(music_params)
-    flash[:notice] = "#{@music.title} was successfully created."
+    if !(params[:music]['title']=="" || params[:music]['description']=="" || params[:music]['singer']=="")
+      @music = Music.create!(music_params)
+      flash[:notice] = "#{@music.title} was successfully created."
+    else
+      flash[:notice] = "One or more information of the new song weren't filled, creation failed"
+    end
     redirect_to musics_path
   end
 
-  def edit
+  def edit 
     @music = Music.find params[:id]
   end
 
@@ -43,6 +48,37 @@ class MusicsController < ApplicationController
     flash[:notice] = "Music '#{@music.title}' deleted."
     redirect_to musics_path
   end
+
+  def download
+    @music = Music.find params[:format]
+    @current_user.musics_download << @music
+    redirect_to download_index_path, notice: "#{@music.title} has been downloaded to your download library"
+  end
+
+
+  def download_remove
+    @music = Music.find params[:format]
+    @current_user.musics_download.delete(@music)
+    redirect_to download_index_path, notice: "#{@music.title} has been removed from your downloading library"
+  end
+
+
+  def favorite
+    @music = Music.find params[:format]
+    @current_user.musics_favorite << @music
+    redirect_to favorite_index_path, notice: "#{@music.title} has been added to your favorite"
+  end
+
+  def favorite_remove
+    @music = Music.find params[:format]
+    @current_user.musics_favorite.delete(@music)
+    redirect_to favorite_index_path, notice: "#{@music.title} has been removed from your favorite"
+  end
+
+  # def payment
+  #   @music = Music.find params[:format]
+  #   redirect_to payment_index_path(@music)
+  # end
 
   private
 
