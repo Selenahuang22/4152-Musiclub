@@ -5,9 +5,12 @@
 - Ubuntu version: 20.04/macOS
 
 ## For grade
-- iter1 branch
-- OR
-- master branch tag v1.3
+- Iter1:
+  - iter1 branch
+  - OR
+  - master branch tag v1.3
+- Iter2:
+  - iter2 branch
 
 
 ## Team member
