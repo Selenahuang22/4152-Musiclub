@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(version: 20221116201311) do
   end
 
   create_table "favorite_carts", force: :cascade do |t|
-    t.string   "music_id"
-    t.string   "account_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "music_id"
+    t.integer  "account_id"
   end
 
   create_table "libraries", force: :cascade do |t|
@@ -47,12 +47,12 @@ ActiveRecord::Schema.define(version: 20221116201311) do
   end
 
   create_table "order_details", force: :cascade do |t|
-    t.string   "music_id"
-    t.string   "account_id"
     t.integer  "status"
     t.string   "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "music_id"
+    t.integer  "account_id"
   end
 
   create_table "orders", force: :cascade do |t|
