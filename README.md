@@ -28,4 +28,4 @@ $ rake cucumber
 $ rake spec
 ```
 ## Heroku deployment link:
-https://musiclub.herokuapp.com/
+https://musiclub-4152.herokuapp.com
