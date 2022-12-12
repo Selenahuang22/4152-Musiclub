@@ -21,7 +21,13 @@
   <%= @music.description %>
 </p>
 
+<h3>Comments:</h3>
+<p id="comments">
+  #<%= @music.description %>
+</p>
+
 <div class="row">
+  <%= link_to 'Add Comments', '#', class: 'link_button', id: 'comment_button' %> 
 
   <% if @current_user.admin %>
     <%= link_to 'Edit', edit_music_path(@music), class: 'link_button', id: 'edit_button' %>

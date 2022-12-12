@@ -158,9 +158,12 @@
     margin-bottom: 5px;
     margin-right: 10px;
   }
-  #edit_button,
+  
   #back_button {
     background: lightgoldenrodyellow;
+  }
+  #comment_button {
+    background: rgb(163, 168, 249);
   }
   .row {
     margin-top: 30px;
@@ -249,7 +252,7 @@
     color: white;
   }
 
-  #download_button {
+  #download_button, #edit_button {
     background-color: green;
     color: white;
   }
@@ -383,6 +386,9 @@
   #description {
     font-size: large;
   }
+  #comments {
+    font-size: large;
+  }
   #categories_submit {
     cursor: pointer;
     border: none;
@@ -435,4 +441,61 @@
 
 .checkbox > input:active {
     border: 2px solid #34495E;
+}
+#search_section {
+  display: flex;
+  margin-bottom: 25px;
+}
+.search_bar{
+  margin:auto;
+  max-width:300px;
+  margin-left:500px;
+}
+#search_bar1 {
+  margin-left:400px;
+}
+.search_bar input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  box-sizing: border-box;
+}
+  
+.search_bar button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: orange;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  }
+  
+.search_bar button:hover {
+  background: darkorange;
+}
+  
+.search_bar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-weight: bold;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-search:before {
+  content: "Search";
 }
