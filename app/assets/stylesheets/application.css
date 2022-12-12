@@ -61,7 +61,11 @@
   #payment_method_form {
     justify-items: center;
   }
-
+  #sign_up {
+    justify-items: center;
+    display: grid;
+  } 
+  
   #login_form input, #payment_method_form input {
     width: 375px;
     height: 46px;
@@ -74,7 +78,7 @@
     margin-top: 10px;
   }
 
-  #login_form input[type="submit"], #payment_method_form input[type="submit"] {
+  #login_form input[type="submit"], #payment_method_form input[type="submit"], #signup_button {
     text-align: center;
     line-height: 29px;
     height: 48px;
@@ -89,12 +93,23 @@
     color: #FFFFFF;
     margin-top: 11px;
   }
+
+  #signup_button {
+    margin-top: 0px;
+    background: tomato;
+    margin-bottom: 30px;
+    height: 42px;
+    width: 380px;
+    line-height: 39px;
+  }
   #payment_method_form input[type="submit"] {
     background: forestgreen;
   }
-  #login_title, #payment_method_title {
+  #login_title, #payment_method_title, #signup_text {
     text-align: center;
-    
+  }
+  #signup_text{
+    margin-top: 50px;
   }
   #create_music_form input,
   #create_music_form select,
