@@ -22,12 +22,24 @@
 </p>
 
 <h3>Comments:</h3>
-<p id="comments">
-  #<%= @music.description %>
-</p>
+<div id="comment_div">
+<% if @comments_content.length > 0%>
+    <% @comments_content.each do |c| %>
+        <div id="comments">
+          <%= c[:author] %>: 
+          <span style="color:maroon"><%= c[:content] %></span>
+        </div>
+    <% end %>
+<% else %>
+    <div id="comments"> Nil </div>
+<% end %>
+
+</div>
+
+
 
 <div class="row">
-  <%= link_to 'Add Comments', '#', class: 'link_button', id: 'comment_button' %> 
+  <%= link_to 'Comment', comment_index_path(@music), class: 'link_button', id: 'comment_button' %> 
 
   <% if @current_user.admin %>
     <%= link_to 'Edit', edit_music_path(@music), class: 'link_button', id: 'edit_button' %>

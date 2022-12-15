@@ -5,6 +5,7 @@ class MusicsController < ApplicationController
   def show
     id = params[:id] 
     @music = Music.find(id) 
+    @comments_content = Comment.with_music(@music.id)
   end
 
   def index
@@ -79,6 +80,7 @@ class MusicsController < ApplicationController
   #   @music = Music.find params[:format]
   #   redirect_to payment_index_path(@music)
   # end
+
 
   private
 

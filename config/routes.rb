@@ -20,4 +20,7 @@ Musiclub::Application.routes.draw do
   get 'payment_index' => 'payment#index'
   post 'create_payment' => 'payment#create_payment'
 
+  get 'comment_index' => 'comment#index'
+  post 'add_comment' => 'comment#add_comment'
+
 end

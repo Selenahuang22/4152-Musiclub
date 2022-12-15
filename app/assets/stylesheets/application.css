@@ -111,6 +111,12 @@
   #signup_text{
     margin-top: 50px;
   }
+
+  #comment_div{
+    margin-left: 50px;
+    margin-right: 50px;
+    /* background-color: #fcb; */
+  }
   #create_music_form input,
   #create_music_form select,
   #edit_music_form input,
@@ -164,6 +170,7 @@
   }
   #comment_button {
     background: rgb(163, 168, 249);
+    color: rgb(19, 21, 67);
   }
   .row {
     margin-top: 30px;

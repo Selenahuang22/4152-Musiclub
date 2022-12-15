@@ -1,8 +1,0 @@
-<h2>Add Comment to <em><%= @music.title %></em></h2>
-<%= form_tag '#', :method => :put, id: 'edit_music_form' do %>
-  <%= label :music, :comments, 'Comment', class: 'col-form-label' %>
-  <%= text_field :music, 'comments', class: 'form-control' %>
-  <br/>
-  <%= submit_tag 'Add Comment', class: 'btn btn-primary' %>
-  <%= link_to 'Cancel', music_path(@music), class: 'link_button' %>
-<% end %>
