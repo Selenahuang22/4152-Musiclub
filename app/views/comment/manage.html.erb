@@ -1,0 +1,30 @@
+<div>
+  <h2>All Comments</h2>
+</div>
+
+<div class="scroll-box">
+  <table class="table table-striped col-md-12" id="musics">
+    <thead>
+      <tr>
+        <th>Music</th>
+        <th>Author</th>
+        <th>Content</th>
+        <th>Create at</th>
+        <th>Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @comments.each do |c| %>
+        <tr>
+          <td><%= c.music_title %></td>
+          <td><%= c.account_name %></td>
+          <td style="color:maroon"><%= c.content %></td>
+          <td><%= c.created_at %></td>
+          <td id="operations">
+              <%= link_to 'Remove', comment_destroy_path(c), class: 'small_link_button', id: 'delete_button' %> 
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

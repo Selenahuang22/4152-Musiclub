@@ -23,4 +23,6 @@ Musiclub::Application.routes.draw do
   get 'comment_index' => 'comment#index'
   post 'add_comment' => 'comment#add_comment'
 
+  get 'comment_manage' => 'comment#manage'
+  get 'comment_destroy' => 'comment#destroy'
 end

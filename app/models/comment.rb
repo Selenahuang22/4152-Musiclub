@@ -10,7 +10,7 @@ class Comment < ApplicationRecord
         @comments.each do |c|
             @comments_content << {
                 :content => c["content"],
-                :author => Account.find_by_id(c["account_id"]).name
+                :author => c["account_name"]
             }
         end
         return @comments_content
