@@ -1,10 +1,7 @@
-#TODO: Scenario: edit a music on the home page
-#TODO: Scenario: delete a music on the home page 
-
 Feature: Musiclub manager changes music information or delete a music on the home page
 
-# Basic function 2: 
-# A manager can update music's information or delete it in the homepage page. 
+# Main function for an admin: 
+# An admin can update music's information or delete it in the homepage page. 
 
 Background: music have been added to database
 

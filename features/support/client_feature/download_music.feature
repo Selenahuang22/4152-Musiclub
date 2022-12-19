@@ -45,6 +45,7 @@ Scenario: download a music from the home page and make payment unsuccessfully
     And I fill in "Card Holder's Name" with "Alice"
     And I press "Confirm Payment"
     Then I am still on payment page
+    And I should see "Invalid payment information"
 
 
 Scenario: I cannot repeatedly download a music if I have downloaded it before
@@ -101,10 +102,15 @@ Scenario: back home pressing Musiclub button
     When I follow "Musiclub"
     Then I am on the Musiclub home page
 
+Scenario: back home pressing Home button
+    Given I am on my download library page
+    When I follow "Home"
+    Then I am on the Musiclub home page
 
-# Scenario: Add payment method
 
-# Potential Scenario: comment on music
+
+# Potential Scenario in the next iteration: 
+# comment on music
 
 
 

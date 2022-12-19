@@ -22,5 +22,16 @@ describe Music do
             expect(Music.with_categories(['pop'],@sort_by)).to match_array([music1,music2])
         end
     end
+
+    describe 'test self.search_by' do
+        let!(:music1) { FactoryBot.create(:music, title: 'M1',category:'pop') }
+        it 'should return music with the specific title when input is not nil or empty' do
+          expect(Music.search_by('M')).to match(["M1"])
+          expect(Music.search_by('1')).to match(["M1"])
+        end
+        it 'should return nil when input is not nil or empty' do
+            expect(Music.search_by('')).to match(nil)
+        end
+    end
 end
 

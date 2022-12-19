@@ -1,4 +1,11 @@
-<h2>All Musics</h2>
+<div id="search_section">
+  <h2>All Musics</h2>
+
+  <form class="search_bar" action="music_search">
+    <input type="text" name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+</div>
 
 <%= form_tag musics_path, method: :get, id: 'categories_form' do %>
   <%= hidden_field_tag 'sort_by', @sort_by %>
@@ -65,6 +72,8 @@
               <% else %>
                 <%= link_to 'Favorite', '#', class: 'small_link_button', id: 'favorite_invalid_button' %>
               <% end %>
+
+              <%= link_to 'Comment', comment_index_path(music), class: 'small_link_button', id: 'comment_button' %> 
             
             <% end %>
 

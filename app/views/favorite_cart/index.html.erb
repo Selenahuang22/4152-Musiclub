@@ -1,6 +1,9 @@
 <h2 id="lib_header1">Your Favorite List</h2> 
 <h3 id="lib_header2">Download or manage your music below</h3>
-
+<form class="search_bar" id="search_bar1" action="">
+    <input type="text" name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+</form>
 
 <div id="all_musics">
 
@@ -20,7 +23,8 @@
               <% else %>
                 <%= link_to 'Download', '#', class: 'library_link_button', id: 'download_invalid_button' %>
               <% end %>
-              
+            
+            <%= link_to 'Comment', comment_index_path(music), class: 'library_link_button', id: 'comment_button' %> 
             <%= link_to 'Remove', favorite_remove_music_path(music), class: 'library_link_button', id: 'remove_button' %>
             <%= link_to 'Back to Musiclub', musics_path, class: 'library_link_button', id: 'back_button' %>
         </div>

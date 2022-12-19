@@ -1,6 +1,9 @@
 <h2 id="lib_header1">Downloaded Music Library</h2> 
 <h3 id="lib_header2">Manage your music below</h3>
-
+<form class="search_bar" id="search_bar1" action="">
+    <input type="text" name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+</form>
 
 <div id="all_musics">
 
@@ -15,6 +18,7 @@
             <br/>
             <%= music.release_date %>
             <br/>
+            <%= link_to 'Comment', comment_index_path(music), class: 'library_link_button', id: 'comment_button' %> 
             <%= link_to 'Back to Musiclub', musics_path, class: 'library_link_button', id: 'back_button' %>
             <%= link_to 'Delete', download_remove_music_path(music), class: 'library_link_button', id: 'remove_button' %>
         </div>

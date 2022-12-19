@@ -1,6 +1,6 @@
 Feature: Musiclub client see music information and is able to download or favorite it from music detail page
 
-# Basic function 2: 
+# Main function for a client: 
 # A client can download or mark musics as favourite in music details page. 
 
 Background: music have been added to database
@@ -30,7 +30,6 @@ Background: music have been added to database
   And 9 seed music should exist
   And I should see "Jack"
 
-# Update the information for a specific music
 Scenario: go to new music details page and edit music
   Given I am on the Musiclub home page
   When I follow "Shake it Off"
@@ -39,14 +38,6 @@ Scenario: go to new music details page and edit music
   Then I am on my download library page
   Then I should see "Shake it Off"
 
-Scenario: go back to the home page
-  Given I am on the Musiclub home page
-  When I follow "Shake it Off"
-  Then I should see "Details about Shake it Off"
-  And I follow "Back to music list"
-  Then I am on the Musiclub home page
-
-# Favorite a music from music board
 Scenario: favorite a music form Musiclub
   Given I am on the Musiclub home page
   And I should see "Shake it Off"
@@ -55,3 +46,10 @@ Scenario: favorite a music form Musiclub
   And I follow "Favorite"
   Then I am on my favorite page
   And I should see "Shake it Off"
+
+Scenario: go back to the home page
+  Given I am on the Musiclub home page
+  When I follow "Shake it Off"
+  Then I should see "Details about Shake it Off"
+  And I follow "Back to music list"
+  Then I am on the Musiclub home page

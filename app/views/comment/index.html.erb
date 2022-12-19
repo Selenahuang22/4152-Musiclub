@@ -1,0 +1,11 @@
+
+
+
+<h2>Add Comment to <em><%= @music.title %></em></h2>
+<%= form_tag '/add_comment', class: 'form', id: "edit_music_form" do %>
+  <%# <%= label :comment, :content, 'Comment', class: 'col-form-label' %> 
+  <%= text_field :comment, 'content', class: 'form-control' %>
+  <br/> 
+  <%= submit_tag 'Add Comment', class: 'link_button', id: 'comment_button' %>
+  <%= link_to 'Cancel', music_path(@music), class: 'link_button' %>
+<% end %>

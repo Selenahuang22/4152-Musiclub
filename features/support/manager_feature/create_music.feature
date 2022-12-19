@@ -1,7 +1,7 @@
 Feature: Musiclub manager adds new music into music repository
 
-# Basic function 1: 
-# A manager will need to add (create) new music to music home page a new song published and Musiclub obtained the copyright for users to listen / download
+# Main function for an admin: 
+# A admin will need to add (create) new music to music home page a new song published and Musiclub obtained the copyright for users to listen / download
 
 Background: music have been added to database
 

@@ -1,7 +1,7 @@
 Feature: Musiclub manager see music information and is able to edit or delete it from music detail page
 
-# Basic function 2: 
-# A manager can update music's information in music details page. He may also remove a music from music board if the song has some problems or Musiclub has no copyrights for the song anymore.
+# Main function for an admin: 
+# An admin can update music's information in music details page. He may also remove a music from music board if the song has some problems or Musiclub has no copyrights for the song anymore.
 
 Background: music have been added to database
 
