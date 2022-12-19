@@ -34,6 +34,7 @@ class AccountsController < ApplicationController
   end
 
   def create_account
+    name = params[:user][:name].strip
     email = params[:user][:email].strip
     password_html = params[:password].strip
     account = Account.find_by(email:email)
@@ -41,7 +42,7 @@ class AccountsController < ApplicationController
       flash.notice = "This account already exists!"
       render :signup
     else
-      Account.create({:name => email, :email => email, :password => password_html, :admin => false })
+      Account.create({:name => name, :email => email, :password => password_html, :admin => false })
       flash.notice = "Signup successfully!"
       render :login
     end 

@@ -1,6 +1,8 @@
 <h2 id="login_title">Musiclub User Sign-up</h2>
 
 <%= form_tag '/create_account', class: 'form', id: "login_form" do %>
+  <%= label :user, :name, 'Name', class: 'col-form-label' %>
+  <%= text_field :user, :name, class: 'form-control' %>
   <%= label :user, :email, 'Email address', class: 'col-form-label' %>
   <%= email_field :user, :email, class: 'form-control' %>
   <%= label :password, 'Password', class: 'col-form-label' %>
