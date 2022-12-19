@@ -25,8 +25,18 @@ class Music < ApplicationRecord
   end
 
   def self.search_by(input)
-    Music.where(title:input)
+    if input.nil?||input.empty?
+      result_list=nil
+    else
+      result_list=[]
+      music_all=Music.all
+      music_all.each do |c|
+        t_title=c.title
+        if t_title.downcase.include?(input.downcase)
+          result_list.append(t_title)
+        end
+      end
+    end
+    return result_list
   end
-  
-
 end
