@@ -25,7 +25,7 @@ class Music < ApplicationRecord
   end
 
   def self.search_by(input)
-    Music.where(titla:input)
+    Music.where(title:input)
   end
   
 
