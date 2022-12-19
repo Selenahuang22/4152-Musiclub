@@ -14,7 +14,7 @@ describe MusicsController do
     describe 'test index' do
         it 'should call index method' do
             music1=Music.create!(:title=>'M1')
-            get :index
+            get :index,{},{ search_res: music1.title }
             expect(response).to have_http_status(:found)
         end
     end
