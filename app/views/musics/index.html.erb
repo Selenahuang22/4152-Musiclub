@@ -3,83 +3,87 @@
 
   <form class="search_bar" action="music_search">
     <input type="text" name="search">
-    <button type="submit"><i class="fa fa-search"></i></button>
+    <button type="submit" name="search button">
+      <i class="fa fa-search"></i>
+      <%# Search %>
+    </button>
   </form>
-</div>
 
-<%= form_tag musics_path, method: :get, id: 'categories_form' do %>
-  <%= hidden_field_tag 'sort_by', @sort_by %>
-  <% @all_categories.each do |category| %>
-    <div class="checkbox">     
-      <%= check_box_tag "categories[#{category}]", '1', (@categories_to_show_hash.include?(category)),
-        class: 'form-check-input' %>
-      <%= label_tag "categories[#{category}]", category, class: 'form-check-label' %>
-    </div>
+  </div>
+
+  <%= form_tag musics_path, method: :get, id: 'categories_form' do %>
+    <%= hidden_field_tag 'sort_by', @sort_by %>
+    <% @all_categories.each do |category| %>
+      <div class="checkbox">     
+        <%= check_box_tag "categories[#{category}]", '1', (@categories_to_show_hash.include?(category)),
+          class: 'form-check-input' %>
+        <%= label_tag "categories[#{category}]", category, class: 'form-check-label' %>
+      </div>
+    <% end %>
+    <%= submit_tag 'Refresh', id: 'categories_submit', class: 'small_link_button' %>
   <% end %>
-  <%= submit_tag 'Refresh', id: 'categories_submit', class: 'small_link_button' %>
-<% end %>
-<div class="scroll-box">
-  <table class="table table-striped col-md-12" id="musics">
-    <thead>
-      <tr>
-        <th>
-          <%= link_to 'Music Title', musics_path({sort_by: 'title', categories: @categories_to_show_hash}),
-                      id: 'title_header', class: ('bg-warning hilite' if @sort_by == 'title') %>
-        </th>
-        <th>Category</th>
-        <th>
-        <%= link_to 'Singer', musics_path({sort_by: 'singer', categories: @categories_to_show_hash}),
-                      id: 'singer_header', class: ('bg-warning hilite' if @sort_by == 'singer') %>
-        </th>
-        <th>
-          <%= link_to 'Release Date',
-              musics_path({sort_by: 'release_date', categories: @categories_to_show_hash}),
-              id: 'release_date_header', class: ('bg-warning hilite' if @sort_by == 'release_date') %>
-        </th>
-        <th>Operations</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @musics.each do |music| %>
+  <div class="scroll-box">
+    <table class="table table-striped col-md-12" id="musics">
+      <thead>
         <tr>
-          <td>
-            <%= link_to "#{music.title}", music_path(music) %>
-          </td>
-          <td>
-            <%= music.category %>
-          </td>
-          <td>
-            <%= music.singer %>
-          </td>
-          <td>
-            <%= music.release_date %>
-          </td>
-          <td id="operations">
-
-            <% if @current_user.admin %>
-              <%= link_to 'Edit', edit_music_path(music), class: 'small_link_button', id: 'edit_button' %>
-              <%= link_to 'Delete', music_path(music), 'data-method': 'delete', 'data-confirm': 'Are you sure?', class: 'small_link_button' %>
-            <% else %>
-
-              <% if !@current_user.musics_download.include? music %>
-                <%= link_to 'Download', payment_index_path(music), class: 'small_link_button', id: 'download_button' %>
-              <% else %>
-                <%= link_to 'Download', '#', class: 'small_link_button', id: 'download_invalid_button' %>
-              <% end %>
-
-              <% if !@current_user.musics_favorite.include? music %>
-                <%= link_to 'Favorite', favorite_music_path(music), class: 'small_link_button', id: 'favorite_button' %>
-              <% else %>
-                <%= link_to 'Favorite', '#', class: 'small_link_button', id: 'favorite_invalid_button' %>
-              <% end %>
-
-              <%= link_to 'Comment', comment_index_path(music), class: 'small_link_button', id: 'comment_button' %> 
-            
-            <% end %>
-
-          </td>
+          <th>
+            <%= link_to 'Music Title', musics_path({sort_by: 'title', categories: @categories_to_show_hash}),
+                        id: 'title_header', class: ('bg-warning hilite' if @sort_by == 'title') %>
+          </th>
+          <th>Category</th>
+          <th>
+          <%= link_to 'Singer', musics_path({sort_by: 'singer', categories: @categories_to_show_hash}),
+                        id: 'singer_header', class: ('bg-warning hilite' if @sort_by == 'singer') %>
+          </th>
+          <th>
+            <%= link_to 'Release Date',
+                musics_path({sort_by: 'release_date', categories: @categories_to_show_hash}),
+                id: 'release_date_header', class: ('bg-warning hilite' if @sort_by == 'release_date') %>
+          </th>
+          <th>Operations</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+      </thead>
+      <tbody>
+        <% @musics.each do |music| %>
+          <tr>
+            <td>
+              <%= link_to "#{music.title}", music_path(music) %>
+            </td>
+            <td>
+              <%= music.category %>
+            </td>
+            <td>
+              <%= music.singer %>
+            </td>
+            <td>
+              <%= music.release_date %>
+            </td>
+            <td id="operations">
+
+              <% if @current_user.admin %>
+                <%= link_to 'Edit', edit_music_path(music), class: 'small_link_button', id: 'edit_button' %>
+                <%= link_to 'Delete', music_path(music), 'data-method': 'delete', 'data-confirm': 'Are you sure?', class: 'small_link_button' %>
+              <% else %>
+
+                <% if !@current_user.musics_download.include? music %>
+                  <%= link_to 'Download', payment_index_path(music), class: 'small_link_button', id: 'download_button' %>
+                <% else %>
+                  <%= link_to 'Download', '#', class: 'small_link_button', id: 'download_invalid_button' %>
+                <% end %>
+
+                <% if !@current_user.musics_favorite.include? music %>
+                  <%= link_to 'Favorite', favorite_music_path(music), class: 'small_link_button', id: 'favorite_button' %>
+                <% else %>
+                  <%= link_to 'Favorite', '#', class: 'small_link_button', id: 'favorite_invalid_button' %>
+                <% end %>
+
+                <%= link_to 'Comment', comment_index_path(music), class: 'small_link_button', id: 'comment_button' %> 
+              
+              <% end %>
+
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>

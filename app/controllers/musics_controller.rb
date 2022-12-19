@@ -25,10 +25,12 @@ class MusicsController < ApplicationController
 
   def search
     session['search_res']=nil
-    @search_result=Music.search_by(params[:search])
-    session['sort_by']='title'
-    session['search_res']=@search_result
-    redirect_to musics_path(@search_result)
+    if params[:search].strip() != ""
+      @search_result=Music.search_by(params[:search])
+      session['sort_by']='title'
+      session['search_res']=@search_result
+    end
+    redirect_to musics_path
   end
   
   def new

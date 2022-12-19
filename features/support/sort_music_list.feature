@@ -52,12 +52,3 @@ Scenario: sort music in increasing order of release date
   When I follow "Release Date"
   Then I should see "So What" before "Toxic" 
 
-
-
-
-
-# TODO in the next iteration:
-
-# Scenario: Add "writing comment" function for clients and the songs can be sorted by the number of comments 
-
-# Scenario: Record the playing times for music and enable the songs to be sorted by playing times

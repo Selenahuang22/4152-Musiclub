@@ -1,8 +1,8 @@
-Feature: display list of musics filtered by a specific category or a specific singer
+Feature: display list of musics filtered user's search result
 
-# Basic Function 1 for a client and an admin:
+# Function for a client and an admin:
 # when browsing music on the homepage,
-# I expect to filter the music list based on my preferred features, like music cateogories, singers, etc.
+# I expect to search the music by music title
 
 Background: music have been added to database
 
@@ -37,17 +37,35 @@ Background: music have been added to database
   Then I am on the Musiclub home page
   And 9 seed music should exist
 
-# filter by categories
-Scenario: restrict to musics with "rock" or "pop" categories
-  Given I check the following categories: rock, pop
-  And I uncheck the following categories: country, blues, classical, jazz
-  And I press "Refresh"
-  Then I should see the following music: Born to Run, Shake it Off, Toxic, Rolling in the Deep
-  And I should not see the following music: Backroad Therapy, Working Man, Vespers of 1610, So What, You Proof
+# search by exact music name
+Scenario: search by exact music title
+  When I fill in "search" with "toxic"
+  And I press "search button"
+  Then I should see the following music: Toxic
+  Then I should not see the following music: Backroad Therapy, Born to Run, Shake it Off, Working Man, Vespers of 1610, So What, You Proof, Rolling in the Deep
 
-# default setting: all categories are defaultly selected when first entering the application
-Scenario: all categories selected
-  Given I check the following categories: country, rock, pop, blues, classical, jazz
-  And I press "Refresh"
+# search by vague name
+Scenario: search by exact music title
+  When I fill in "search" with "of"
+  And I press "search button"
+  Then I should see the following music: Shake it Off, Vespers of 1610, You Proof
+  Then I should not see the following music: Backroad Therapy, Born to Run, Working Man, So What, Rolling in the Deep, Toxic
+
+# no input given in search, should give all the music
+Scenario: no input in search
+  When I fill in "search" with ""
+  And I press "search button"
   Then I should see all the music
+
+# no the search input is an empty string, should give all the music
+Scenario: empty string in search
+  When I fill in "search" with "     " 
+  And I press "search button"
+  Then I should see all the music
+
+# no searching result, should give empty music list
+Scenario: no searching result
+  When I fill in "search" with "xxxxxxx"
+  And I press "search button"
+  Then I should not see the following music: Backroad Therapy, Born to Run, Shake it Off, Working Man, Vespers of 1610, So What, You Proof, Rolling in the Deep, Toxic
 
