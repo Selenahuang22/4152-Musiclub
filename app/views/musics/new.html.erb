@@ -12,7 +12,7 @@
   <%= label :music, :singer, 'Singer', class: 'col-form-label' %>
   <%= text_field :music, 'singer', class: 'form-control' %>
   <br/>
-  <%= submit_tag 'Save Changes', class: 'btn btn-primary' %>
+  <%= submit_tag 'Save Changes', class: 'btn btn-primary', id: 'update_info' %>
   <%= link_to 'Cancel', musics_path, class: 'link_button' %>
 <% end %>
 

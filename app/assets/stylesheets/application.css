@@ -94,6 +94,21 @@
     margin-top: 11px;
   }
 
+  #update_info {
+    background: forestgreen;
+    color: white;
+    text-align: center;
+    font-size: medium;
+    font-weight: 500;
+    border-radius: 1.5vh;
+    width: 50vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    align-items: center;
+    display: grid;
+  }
+
   #signup_button {
     margin-top: 0px;
     background: tomato;
