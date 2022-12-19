@@ -11,8 +11,7 @@ class MusicsController < ApplicationController
   def index
     @all_categories = Music.all_categories
     @musics = Music.with_categories(categories_list, sort_by)
-    if session['search_res'].nil?
-    else
+    if !session['search_res'].nil?
       @search_music=Music.where(title: session['search_res'])
       @musics=@search_music
       session['search_res']=nil
@@ -27,12 +26,8 @@ class MusicsController < ApplicationController
   def search
     session['search_res']=nil
     @search_result=Music.search_by(params[:search])
-    puts "search_result"
-    puts @search_result
     session['sort_by']='title'
     session['search_res']=@search_result
-    puts "session['search_res']"
-    puts session['search_res']
     redirect_to musics_path(@search_result)
   end
   
