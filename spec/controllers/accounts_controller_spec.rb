@@ -45,4 +45,31 @@ describe AccountsController do
         end
     end
 
+    describe 'test sign up' do
+        it 'should call signup method' do
+            get :signup
+            expect(response).to have_http_status(:ok)
+        end
+    end
+
+    describe 'test create_account' do
+        let!(:account1) {FactoryBot.create(:account)}
+        it 'should return signup successfully if user does not exist' do
+            user1={:name => '123', :email =>'123@gmail.com'}
+            password1='12345678'
+            post :create_account,:user=>user1, :password=>password1
+            expect(flash[:notice]).to eq( "Signup successfully!")
+        end
+
+        it 'should return login successfully with valid email and password' do
+            user1={:name => '123', :email =>'123@gmail.com'}
+            password1='12345678'
+            post :create_account,:user=>user1, :password=>password1
+            expect(flash[:notice]).to eq( "Signup successfully!")
+            post :create_login,:user=>user1, :password=>password1
+            expect(flash[:notice]).to eq(  "Login successfully!")
+        end
+
+    end
+
 end
