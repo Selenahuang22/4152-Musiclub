@@ -7,6 +7,7 @@ Musiclub::Application.routes.draw do
   post 'create_login' => 'accounts#create_login'
   delete 'logout' => "accounts#logout"
 
+  get 'music_search'=>'musics#search'
   get 'download_music' => 'musics#download'
   get 'download_remove_music' => 'musics#download_remove'
   get 'favorite_music' => 'musics#favorite'

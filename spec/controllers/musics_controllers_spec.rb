@@ -19,6 +19,13 @@ describe MusicsController do
         end
     end
 
+    describe 'test search' do
+        it 'should call search method' do
+            music1=Music.create!(:title=>'M1')
+            get :search, :search=>'M1'
+            expect(response).to have_http_status(:found)
+        end
+    end
 
     describe 'test create' do
         it 'should call create method successfully' do

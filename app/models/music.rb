@@ -24,4 +24,9 @@ class Music < ApplicationRecord
     end
   end
 
+  def self.search_by(input)
+    Music.where(title:input)
+  end
+  
+
 end

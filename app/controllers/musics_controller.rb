@@ -11,6 +11,12 @@ class MusicsController < ApplicationController
   def index
     @all_categories = Music.all_categories
     @musics = Music.with_categories(categories_list, sort_by)
+    if session['search_res'].nil?
+    else
+      @search_music=Music.where(title: session['search_res'])
+      @musics=@search_music
+      session['search_res']=nil
+    end
     @categories_to_show_hash = categories_hash
     @sort_by = sort_by
     # remember the correct settings for next time
@@ -18,6 +24,14 @@ class MusicsController < ApplicationController
     session['sort_by'] = @sort_by
   end
 
+  def search
+    session['search_res']=nil
+    @search_result=Music.search_by(params[:search])
+    session['sort_by']='title'
+    session['search_res']=@search_result[0].title
+    redirect_to musics_path(@search_result)
+  end
+  
   def new
     # default: render 'new' template
   end
@@ -85,6 +99,7 @@ class MusicsController < ApplicationController
   private
 
   def force_index_redirect
+    puts 
     if !params.key?(:categories) || !params.key?(:sort_by)
       flash.keep
       url = musics_path(sort_by: sort_by, categories: categories_hash)
