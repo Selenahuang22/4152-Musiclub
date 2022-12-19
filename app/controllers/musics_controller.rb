@@ -11,23 +11,12 @@ class MusicsController < ApplicationController
   def index
     @all_categories = Music.all_categories
     @musics = Music.with_categories(categories_list, sort_by)
-    # puts "The class of @musics is #{@musics.class}"
-    # puts @musics.inspect
     if session['search_res'].nil?
-      # puts 2
     else
-      # puts 3
-      # puts session['search_res']
       @search_music=Music.where(title: session['search_res'])
-      # puts @search_music.inspect
-      # puts "The class of @search_music is #{@search_music.class}"
       @musics=@search_music
-      # puts @musics.inspect
-      # puts @search_music.inspect
-      # @musics=@search_music+@musics
       session['search_res']=nil
     end
-    
     @categories_to_show_hash = categories_hash
     @sort_by = sort_by
     # remember the correct settings for next time
@@ -38,11 +27,8 @@ class MusicsController < ApplicationController
   def search
     session['search_res']=nil
     @search_result=Music.search_by(params[:search])
-    # puts @search_result.inspect
     session['sort_by']='title'
     session['search_res']=@search_result[0].title
-    # puts 1
-    # puts session['search_res']
     redirect_to musics_path(@search_result)
   end
   
