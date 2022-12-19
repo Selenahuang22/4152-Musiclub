@@ -1,7 +1,7 @@
 Feature: Admin has no right to download music or mark music as favorite
 
 # Main function for an admin:
-# The responsibility of an admin is to manage the main Musiclub collections, not to use the service as a normal user. So, an admin should not see any "download" or "favorite" function on the page.
+# The responsibility of an admin is to manage the main Musiclub collections, not to use the service as a normal user. So, an admin should not see any "download" or "favorite" or "comment" function on the page.
 
 Background: music have been added to database
 
@@ -32,18 +32,23 @@ Scenario: An admin can add new music to the main Musiclub collction
     Given I am on the Musiclub home page
     Then I should see "New music"
 
+Scenario: An admin can manage the comments
+    Given I am on the Musiclub home page
+    Then I should see "Manage comments"
+
 Scenario: An admin does not have the downloaded library and favorite list
     Given I am on the Musiclub home page
     Then I should not see "My Library"
     And I should not see "My Favorite"
 
-Scenario: An admin cannot download/favorite a music from music detail page either
+Scenario: An admin cannot download/favorite/comment a music from music detail page either
     Given I am on the Musiclub home page
     And I follow "Born to Run"
     Then I should not see "Download"
     And I should not see "Favorite"
     And I should see "Edit"
     And I should see "Delete"
+    
 
 
 

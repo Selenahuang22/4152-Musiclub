@@ -1,9 +1,9 @@
 Feature: download the interested music for playing anywhere, anytime
 
 # Main function for a client:
-# when meeting interested music,
-# I expect to download it to my personal music collection and play it anywhere, anytime
-# In order to download a music, I need to pay for it by adding payment methods
+# when I meet the music I want to download and own it, I can add it to my personal music collection by paying for it, and then I can download the original mp3 file to my local computer anytime later
+# I can access my downloaded music list from anywhere
+# I can also remove the music if I don't want to own it anymore or if I have downloaded it many times. （but not recommended cause you have already paid！）
 
 Background: music have been added to database
 
@@ -62,6 +62,7 @@ Scenario: I cannot repeatedly download a music if I have downloaded it before
     And I follow "Download"
     Then I am still on the Musiclub home page
 
+# I can access to my downloaded music page from anywhere
 Scenario: directly go to my download music library
     When I follow "My Library"
     Then I am on my download library page
@@ -97,12 +98,12 @@ Scenario: remove a music from my library
     And I should see "Born to Run has been removed from your downloading library"
 
 
-Scenario: back home pressing Musiclub button
+Scenario: back home when pressing Musiclub button
     Given I am on my download library page
     When I follow "Musiclub"
     Then I am on the Musiclub home page
 
-Scenario: back home pressing Home button
+Scenario: back home when pressing Home button
     Given I am on my download library page
     When I follow "Home"
     Then I am on the Musiclub home page

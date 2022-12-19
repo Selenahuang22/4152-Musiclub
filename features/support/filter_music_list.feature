@@ -51,7 +51,7 @@ Scenario: all categories selected
   And I press "Refresh"
   Then I should see all the music
 
-# default setting: all categories are defaultly selected when first entering the application
+# default setting: all categories are defaultly selected when are no categories being selected
 Scenario: all categories not selected, back to default
   Given I uncheck the following categories: country, rock, pop, blues, classical, jazz
   And I press "Refresh"

@@ -1,7 +1,7 @@
 Feature: client has no permission to manage the main Musiclub collection
 
 # Main function for a client:
-# A client should not be able to add/edit/delete music to the main Musiclub collection
+# A client should not be able to add/edit/delete music to the main Musiclub collection. Also, a client should not be able to manage the music comments. So, when no "new mucis", "edit", "delete", "manage comments" button/link should be displayed on the webpage for a client.
 
 Background: music have been added to database
 
@@ -40,13 +40,14 @@ Scenario: A client can see the link to his/her downloaded library and favorite l
     Then I should see "My Library"
     And I should see "My Favorite"
 
-Scenario: A client cannot edit/delete a music from music detail page either
+Scenario: A client cannot edit/delete a music or manage the comments from music detail page either
     Given I am on the Musiclub home page
     And I follow "Born to Run"
     Then I should see "Download"
     And I should see "Favorite"
     And I should not see "Edit"
     And I should not see "Delete"
+    And I should not see "Manage comments"
 
 
 

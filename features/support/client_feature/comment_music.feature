@@ -1,9 +1,8 @@
 Feature: client adds comments to the music
 
 # Main function for a client:
-# when meeting the music he/she wants to say something,
-# add comment to it,
-# then everyone accessing the details of the music can see his/her comments
+# when I meet the music I want to say something, I can add comment to it, then everyone accessing the details of the music can see my comments
+# I can add comments as many as I want to a music, but I cannot change my comments after submitting it
 
 Background: music have been added to database
 

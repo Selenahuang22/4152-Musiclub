@@ -1,10 +1,9 @@
 Feature: mark the music the client likes to his/her favorite list
 
 # Main function for a client:
-# when meeting interested music,
-# mark it to my favorite list,
+# when I meet the music I am interested, I can mark it to my favorite list
 # I can see all my favorite on one page, and I can download the music from my favorite list
-# I can also remove it from my favorite if I am not interest on it anymore
+# I can also remove it from my favorite if I am not interested in it anymore
 
 Background: music have been added to database
 
@@ -59,16 +58,17 @@ Scenario: download a music from favorite
     Then I am on my download library page
     And I should see "Born to Run"
 
+# I can access to my favorite music page from Musiclub home page
 Scenario: directly go to my favorite music library
     When I follow "My Favorite"
     Then I am on my favorite page
     And I should see "Your Favorite List"
 
-Scenario: back home pressing Home button
+Scenario: back home when pressing Home button
     When I follow "Home"
     Then I am on the Musiclub home page
 
-Scenario: back home pressing Musiclub button
+Scenario: back home when pressing Musiclub button
     When I follow "Musiclub"
     Then I am on the Musiclub home page
 

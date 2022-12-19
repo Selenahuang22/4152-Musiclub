@@ -37,33 +37,33 @@ Background: music have been added to database
   Then I am on the Musiclub home page
   And 9 seed music should exist
 
-# search by exact music name
+# When I search by exact music name, I should be given the exact music if this music exists in the Musiclub
 Scenario: search by exact music title
   When I fill in "search" with "toxic"
   And I press "search button"
   Then I should see the following music: Toxic
   Then I should not see the following music: Backroad Therapy, Born to Run, Shake it Off, Working Man, Vespers of 1610, So What, You Proof, Rolling in the Deep
 
-# search by vague name
+# When I search some keywords, I should be given the musics with this keyword in their names
 Scenario: search by exact music title
   When I fill in "search" with "of"
   And I press "search button"
   Then I should see the following music: Shake it Off, Vespers of 1610, You Proof
   Then I should not see the following music: Backroad Therapy, Born to Run, Working Man, So What, Rolling in the Deep, Toxic
 
-# no input given in search, should give all the music
+# When I have no input in the search bar, I should be given all the music
 Scenario: no input in search
   When I fill in "search" with ""
   And I press "search button"
   Then I should see all the music
 
-# no the search input is an empty string, should give all the music
+# When I enter an empty string, I should be given all the music
 Scenario: empty string in search
   When I fill in "search" with "     " 
   And I press "search button"
   Then I should see all the music
 
-# no searching result, should give empty music list
+# When I search for one music that is not in the musiclub, I should see nothing in the music list
 Scenario: no searching result
   When I fill in "search" with "xxxxxxx"
   And I press "search button"

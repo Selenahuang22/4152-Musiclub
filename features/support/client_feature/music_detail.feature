@@ -1,7 +1,7 @@
 Feature: Musiclub client see music information and is able to download or favorite it from music detail page
 
 # Main function for a client: 
-# A client can download or mark musics as favourite in music details page. 
+# A client can download / mark musics as favourite / add comment to a music in music details page. 
 
 Background: music have been added to database
 
@@ -37,14 +37,6 @@ Scenario: download music from music detail page
   And I follow "Download"
   Then I am on payment page
   And I should see "Payment Methods"
-  When I fill in "Card Number" with "1111222233334444"
-  And I fill in "Expiration Date" with "01/2028"
-  And I fill in "CVV" with "111"
-  And I fill in "Card Holder's Name" with "Alice"
-  And I press "Confirm Payment"
-  Then I am on my download library page
-  # Then I should see "Downloaded Music Library"
-  # And I should see "Shake it Off"
 
 Scenario: favorite a music from music detail page
   Given I am on the Musiclub home page

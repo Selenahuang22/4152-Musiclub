@@ -1,9 +1,8 @@
 Feature: client adds comments to the music
 
-# Main function for a client:
-# when meeting the music he/she wants to say something,
-# add comment to it,
-# then everyone accessing the details of the music can see his/her comments
+# Main function for an admin: 
+# An admin can manage the comments from all the users
+# The admin is responsible to remove the inapproriate comments
 
 Background: music have been added to database
 
@@ -16,9 +15,6 @@ Background: music have been added to database
   | Admin         | admin@musiclub.com | Admin           | true  |
   | Jack          | jack@gmail.com     | jack123456      | false |
 
-#   Given the following comment exist
-#   | music_id    | music_title  | account_id   | account_name     | content       |
-#   | 1           | Born to Run  | 1            | Jack             | xxxxxx        |
 
   Given I am on the login page
   When I fill in "user[email]" with "jack@gmail.com"
