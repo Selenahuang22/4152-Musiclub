@@ -9,4 +9,9 @@ class LibraryController < ApplicationController
         end
     end
 
+    def download_to_local
+        # this is a fake music to download, every music will point to this fake music
+        send_file "#{Rails.root}/public/MerryChristmas.mp3", :type=>"application/mp3", :x_sendfile=>true
+    end
+
   end

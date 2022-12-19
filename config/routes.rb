@@ -12,6 +12,7 @@ Musiclub::Application.routes.draw do
   get 'music_search'=>'musics#search'
   get 'download_music' => 'musics#download'
   get 'download_remove_music' => 'musics#download_remove'
+  get 'download_to_local' => 'library#download_to_local'
   get 'favorite_music' => 'musics#favorite'
   get 'favorite_remove_music' => 'musics#favorite_remove'
 

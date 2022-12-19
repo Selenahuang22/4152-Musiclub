@@ -58,7 +58,7 @@ Scenario: I cannot repeatedly download a music if I have downloaded it before
     And I press "Confirm Payment"
     Then I am on my download library page
     And I should see "Born to Run"
-    Then I follow "Back to Musiclub"
+    Then I follow "Home"
     And I follow "Download"
     Then I am still on the Musiclub home page
 
@@ -78,8 +78,9 @@ Scenario: back to home page when click button from my library
     And I press "Confirm Payment"
     Then I am on my download library page
     And I should see "Born to Run"
-    When I follow "Back to Musiclub"
-    Then I am on the Musiclub home page 
+    When I follow "Download to local"
+    Then I am on my download library page
+    # here, I should see a music has been downloaded to my local computer
 
 Scenario: remove a music from my library
     When I follow "Download"

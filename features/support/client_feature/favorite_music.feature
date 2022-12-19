@@ -32,7 +32,7 @@ Scenario: I cannot repeatedly add a music to my favorite if I have added it befo
     When I follow "Favorite"
     Then I am on my favorite page
     And I should see "Born to Run"
-    Then I follow "Back to Musiclub"
+    Then I follow "Home"
     And I follow "Favorite"
     Then I am still on the Musiclub home page
 
