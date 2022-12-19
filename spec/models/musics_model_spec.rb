@@ -29,6 +29,5 @@ describe Music do
           expect(Music.search_by('M1')).to match([music1])
         end
     end
-
 end
 
