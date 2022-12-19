@@ -22,7 +22,6 @@ Background: music have been added to database
   And I press "Login"
   Then I am on the Musiclub home page
 
-
 Scenario: download a music from the home page and make payment successfully
     When I follow "Download"
     Then I am on payment page

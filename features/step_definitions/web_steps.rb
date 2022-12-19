@@ -26,19 +26,19 @@ require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "sel
 
 module WithinHelpers
   def with_scope(locator)
-    locator ? within(*selector_for(locator)) { yield } : yield
+    # locator ? within(*selector_for(locator)) { yield } : yield
   end
 end
 World(WithinHelpers)
 
 # Single-line step scoper
 When /^(.*) within (.*[^:])$/ do |step, parent|
-  with_scope(parent) { When step }
+  # with_scope(parent) { When step }
 end
 
 # Multi-line step scoper
 When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
-  with_scope(parent) { When "#{step}:", table_or_string }
+  # with_scope(parent) { When "#{step}:", table_or_string }
 end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
@@ -91,110 +91,109 @@ When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
   select(value, :from => field)
 end
 
-When /^(?:|I )check (?:the\s+)?"([^"]*)"(?:\s*checkbox)?$/ do |field|
-  check(field)
-end
+# When /^(?:|I )check (?:the\s+)?"([^"]*)"(?:\s*checkbox)?$/ do |field|
+#   check(field)
+# end
 
-When /^(?:|I )uncheck (?:the\s+)?"([^"]*)"(?:\s*checkbox)?$/ do |field|
-  uncheck(field)
-end
+# When /^(?:|I )uncheck (?:the\s+)?"([^"]*)"(?:\s*checkbox)?$/ do |field|
+#   uncheck(field)
+# end
 
-When /^(?:|I )choose "([^"]*)"$/ do |field|
-  choose(field)
-end
+# When /^(?:|I )choose "([^"]*)"$/ do |field|
+#   choose(field)
+# end
 
-When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
-  attach_file(field, File.expand_path(path))
-end
+# When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
+#   attach_file(field, File.expand_path(path))
+# end
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
   expect(page).to have_content(text)
 end
 
-Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
-  regexp = Regexp.new(regexp)
-
-  assert page.has_xpath?('//*', :text => regexp)
-end
+# Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
+#   regexp = Regexp.new(regexp)
+#   assert page.has_xpath?('//*', :text => regexp)
+# end
 
 Then /^(?:|I )should not see "([^"]*)"$/ do |text|
     expect(page).not_to have_content(text)
 end
 
-Then /^(?:|I )should not see \/([^\/]*)\/$/ do |regexp|
-  regexp = Regexp.new(regexp)
-  assert page.has_no_xpath?('//*', :text => regexp)
-end
+# Then /^(?:|I )should not see \/([^\/]*)\/$/ do |regexp|
+#   regexp = Regexp.new(regexp)
+#   assert page.has_no_xpath?('//*', :text => regexp)
+# end
 
-Then /^the "([^"]*)" field(?: within (.*))? should contain "([^"]*)"$/ do |field, parent, value|
-  with_scope(parent) do
-    field = find_field(field)
-    field_value = (field.tag_name == 'textarea') ? field.text : field.value
-    assert_match(/#{value}/, field_value)
-  end
-end
+# Then /^the "([^"]*)" field(?: within (.*))? should contain "([^"]*)"$/ do |field, parent, value|
+#   with_scope(parent) do
+#     field = find_field(field)
+#     field_value = (field.tag_name == 'textarea') ? field.text : field.value
+#     assert_match(/#{value}/, field_value)
+#   end
+# end
 
-Then /^the "([^"]*)" field(?: within (.*))? should not contain "([^"]*)"$/ do |field, parent, value|
-  with_scope(parent) do
-    field = find_field(field)
-    field_value = (field.tag_name == 'textarea') ? field.text : field.value
-    assert_no_match(/#{value}/, field_value)
-  end
-end
+# Then /^the "([^"]*)" field(?: within (.*))? should not contain "([^"]*)"$/ do |field, parent, value|
+#   with_scope(parent) do
+#     field = find_field(field)
+#     field_value = (field.tag_name == 'textarea') ? field.text : field.value
+#     assert_no_match(/#{value}/, field_value)
+#   end
+# end
 
-Then /^the "([^"]*)" field should have the error "([^"]*)"$/ do |field, error_message|
-  element = find_field(field)
-  classes = element.find(:xpath, '..')[:class].split(' ')
+# Then /^the "([^"]*)" field should have the error "([^"]*)"$/ do |field, error_message|
+#   element = find_field(field)
+#   classes = element.find(:xpath, '..')[:class].split(' ')
 
-  form_for_input = element.find(:xpath, 'ancestor::form[1]')
-  using_formtastic = form_for_input[:class].include?('formtastic')
-  error_class = using_formtastic ? 'error' : 'field_with_errors'
+#   form_for_input = element.find(:xpath, 'ancestor::form[1]')
+#   using_formtastic = form_for_input[:class].include?('formtastic')
+#   error_class = using_formtastic ? 'error' : 'field_with_errors'
 
-  assert classes.include?(error_class)
+#   assert classes.include?(error_class)
 
-  if using_formtastic
-    error_paragraph = element.find(:xpath, '../*[@class="inline-errors"][1]')
-    assert error_paragraph.has_content?(error_message)
-  else
-    assert page.has_content?("#{field.titlecase} #{error_message}")
-  end
-end
+#   if using_formtastic
+#     error_paragraph = element.find(:xpath, '../*[@class="inline-errors"][1]')
+#     assert error_paragraph.has_content?(error_message)
+#   else
+#     assert page.has_content?("#{field.titlecase} #{error_message}")
+#   end
+# end
 
-Then /^the "([^"]*)" field should have no error$/ do |field|
-  element = find_field(field)
-  classes = element.find(:xpath, '..')[:class].split(' ')
-  assert !classes.include?('field_with_errors')
-  assert !classes.include?('error')
-end
+# Then /^the "([^"]*)" field should have no error$/ do |field|
+#   element = find_field(field)
+#   classes = element.find(:xpath, '..')[:class].split(' ')
+#   assert !classes.include?('field_with_errors')
+#   assert !classes.include?('error')
+# end
 
-Then /^the "([^"]*)" checkbox(?: within (.*))? should be checked$/ do |label, parent|
-  with_scope(parent) do
-    field_checked = find_field(label)['checked']
-    assert field_checked
-  end
-end
+# Then /^the "([^"]*)" checkbox(?: within (.*))? should be checked$/ do |label, parent|
+#   with_scope(parent) do
+#     field_checked = find_field(label)['checked']
+#     assert field_checked
+#   end
+# end
 
-Then /^the "([^"]*)" checkbox(?: within (.*))? should not be checked$/ do |label, parent|
-  with_scope(parent) do
-    field_checked = find_field(label)['checked']
-    assert !field_checked
-  end
-end
+# Then /^the "([^"]*)" checkbox(?: within (.*))? should not be checked$/ do |label, parent|
+#   with_scope(parent) do
+#     field_checked = find_field(label)['checked']
+#     assert !field_checked
+#   end
+# end
 
-Then /^(?:|I )should be on (.+)$/ do |page_name|
-  current_path = URI.parse(current_url).path
-  assert_equal path_to(page_name), current_path
-end
+# Then /^(?:|I )should be on (.+)$/ do |page_name|
+#   current_path = URI.parse(current_url).path
+#   assert_equal path_to(page_name), current_path
+# end
 
-Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
-  query = URI.parse(current_url).query
-  actual_params = query ? CGI.parse(query) : {}
-  expected_params = {}
-  expected_pairs.rows_hash.each_pair{|k,v| expected_params[k] = v.split(',')}
+# Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
+#   query = URI.parse(current_url).query
+#   actual_params = query ? CGI.parse(query) : {}
+#   expected_params = {}
+#   expected_pairs.rows_hash.each_pair{|k,v| expected_params[k] = v.split(',')}
 
-  assert_equal expected_params, actual_params
-end
+#   assert_equal expected_params, actual_params
+# end
 
-Then /^show me the page$/ do
-  save_and_open_page
-end
+# Then /^show me the page$/ do
+#   save_and_open_page
+# end

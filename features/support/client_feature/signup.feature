@@ -20,9 +20,10 @@ Scenario: login with an account that does not exist
     Then I am on the login page
     Then I should see "User does not exist, please sign in!"
 
-    Scenario: sign up with email that does not exist and login with this account
+
+Scenario: sign up with email that does not exist and login with this account
     Given I am on the signup page
-    When I fill in "Name" with "abc"
+    When I fill in "user[name]" with "abc"
     And I fill in "user[email]" with "abc@gmail.com"
     And I fill in "password" with "abc123456"
     And I press "Sign Up"
@@ -32,13 +33,12 @@ Scenario: login with an account that does not exist
     And I fill in "password" with "abc123456"
     And I press "Login"
     Then I am on the Musiclub home page
-    Then I should see "Log Out"
     And I should see "abc"
-
+    
 
 Scenario: sign up with an existing email
     Given I am on the signup page
-    When I fill in "Name" with "Jack"
+    When I fill in "user[name]" with "Jack"
     And I fill in "user[email]" with "jack@gmail.com"
     And I fill in "password" with "jack123456"
     And I press "Sign Up"

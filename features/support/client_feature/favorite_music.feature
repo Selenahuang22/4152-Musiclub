@@ -10,7 +10,7 @@ Background: music have been added to database
 
   Given the following music exist
   | title                   | category  | release_date |  singer            |
-  | Born to Run             | rock      | 25-Aug-1975  |  Bruce Springsteen |
+  | Born to Run             | rock      | 25-Aug-1975  |  Bruce             |
   
   Given the following account exist
   | name          | email              | password        | admin |
