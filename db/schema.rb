@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20221215063334) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string   "music_id"
-    t.string   "account_id"
+    t.integer  "music_id"
+    t.integer  "account_id"
     t.string   "content"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false

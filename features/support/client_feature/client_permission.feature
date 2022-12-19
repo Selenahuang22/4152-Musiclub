@@ -31,6 +31,10 @@ Scenario: A client cannot add new music
     Given I am on the Musiclub home page
     Then I should not see "New music"
 
+Scenario: A client cannot manage comments
+    Given I am on the Musiclub home page
+    Then I should not see "Manage comments"
+
 Scenario: A client can see the link to his/her downloaded library and favorite list
     Given I am on the Musiclub home page
     Then I should see "My Library"

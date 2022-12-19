@@ -30,15 +30,23 @@ Background: music have been added to database
   And 9 seed music should exist
   And I should see "Jack"
 
-Scenario: go to new music details page and edit music
+Scenario: download music from music detail page
   Given I am on the Musiclub home page
   When I follow "Shake it Off"
   Then I should see "Details about Shake it Off"
   And I follow "Download"
+  Then I am on payment page
+  And I should see "Payment Methods"
+  When I fill in "Card Number" with "1111222233334444"
+  And I fill in "Expiration Date" with "01/2028"
+  And I fill in "CVV" with "111"
+  And I fill in "Card Holder's Name" with "Alice"
+  And I press "Confirm Payment"
   Then I am on my download library page
-  Then I should see "Shake it Off"
+  # Then I should see "Downloaded Music Library"
+  # And I should see "Shake it Off"
 
-Scenario: favorite a music form Musiclub
+Scenario: favorite a music from music detail page
   Given I am on the Musiclub home page
   And I should see "Shake it Off"
   When I follow "Shake it Off"

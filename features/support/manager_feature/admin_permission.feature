@@ -20,12 +20,13 @@ Background: music have been added to database
   And I press "Login"
   Then I am on the Musiclub home page
 
-Scenario: An admin can edit/delete music
+Scenario: An admin can edit/delete/comment music
     Given I am on the Musiclub home page
     Then I should see "Edit"
     And I should see "Delete"
     And I should not see "Download"
     And I should not see "Favorite"
+    And I should not see "Comment"
 
 Scenario: An admin can add new music to the main Musiclub collction
     Given I am on the Musiclub home page

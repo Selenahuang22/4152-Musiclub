@@ -31,7 +31,7 @@
         </div>
     <% end %>
 <% else %>
-    <div id="comments" style="color:red"> <b><i> No comments have been added. </i></b></div>
+    <div id="comments" style="color:maroon"> <b><i> No comments have been added. </i></b></div>
 <% end %>
 
 </div>
@@ -48,7 +48,7 @@
   <% else %>
     <%= link_to 'Comment', comment_index_path(@music), class: 'link_button', id: 'comment_button' %> 
     <% if !@current_user.musics_download.include? @music %>
-      <%= link_to 'Download', download_music_path(@music), class: 'link_button', id: 'download_button' %>
+      <%= link_to 'Download', payment_index_path(@music), class: 'link_button', id: 'download_button' %>
     <% else %>
       <%= link_to 'Download', '#', class: 'link_button', id: 'download_invalid_button' %>
     <% end %>
