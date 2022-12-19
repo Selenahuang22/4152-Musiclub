@@ -18,6 +18,11 @@ class MusicsController < ApplicationController
     session['sort_by'] = @sort_by
   end
 
+  def search
+    @musics=Music.search_by(params[:search])
+    puts @musics
+  end
+  
   def new
     # default: render 'new' template
   end
