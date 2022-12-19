@@ -70,15 +70,15 @@ describe MusicsController do
         end
     end
 
-    describe 'test download' do
-        let!(:music1) { FactoryBot.create(:music,:title=>'M1') }
-        let!(:current_user1) {FactoryBot.create(:account)}
-        it 'should call download method' do
-            controller.instance_variable_set(:@current_user, current_user1)
-            get :download,:format=>music1.id
-            expect(flash[:notice]).to eq("M1 has been downloaded to your download library")
-        end
-    end
+    # describe 'test download' do
+    #     let!(:music1) { FactoryBot.create(:music,:title=>'M1') }
+    #     let!(:current_user1) {FactoryBot.create(:account)}
+    #     it 'should call download method' do
+    #         controller.instance_variable_set(:@current_user, current_user1)
+    #         get :download,:format=>music1.id
+    #         expect(flash[:notice]).to eq("M1 has been downloaded to your download library")
+    #     end
+    # end
 
     describe 'test download_remove' do
         let!(:music1) { FactoryBot.create(:music,:title=>'M1') }

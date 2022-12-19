@@ -66,9 +66,9 @@ class MusicsController < ApplicationController
   end
 
   def download
-    @music = Music.find params[:format]
-    @current_user.musics_download << @music
-    redirect_to download_index_path, notice: "#{@music.title} has been downloaded to your download library"
+    # @music = Music.find params[:format]
+    # @current_user.musics_download << @music
+    # redirect_to download_index_path, notice: "#{@music.title} has been downloaded to your download library"
   end
 
 

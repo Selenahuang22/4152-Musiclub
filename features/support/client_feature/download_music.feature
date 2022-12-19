@@ -107,10 +107,14 @@ Scenario: back home pressing Home button
     When I follow "Home"
     Then I am on the Musiclub home page
 
+# edge case: when I have logged out, I cannot visit my download again
+Scenario: back home pressing Home button
+    When I follow "Log Out"
+    Then I am on the login page
+    When I go to my download library page
+    Then I am on the login page
+    And I should not see "Downloaded Music Library"
 
-
-# Potential Scenario in the next iteration: 
-# comment on music
 
 
 

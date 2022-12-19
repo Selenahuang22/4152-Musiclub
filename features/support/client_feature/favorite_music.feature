@@ -72,6 +72,14 @@ Scenario: back home pressing Musiclub button
     When I follow "Musiclub"
     Then I am on the Musiclub home page
 
+# edge case: when I have logged out, I cannot visit my favorite again
+Scenario: back home pressing Home button
+    When I follow "Log Out"
+    Then I am on the login page
+    When I go to my favorite page
+    Then I am on the login page
+    And I should not see "Your Favorite List"
+
 
 
 

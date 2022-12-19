@@ -8,7 +8,7 @@ module MusicsHelper
 
   def musicpic(singer)
     path = "/images/"
-    pic = ["Alan Walker", "Alexandra Kay", "Avril Lavigne", "Beethoven", "Bizet", "Bruce Springsteen", "Charles Brown", "Charley Patton", "Don Henley", "Eagles", "Ella Fitzgerald", "Frank Sinatra", "J.S. Bach", "Louis Armstrong", "Maroon 5", "Miles Davis", "Monteverdi", "Morgan Wallen", "Mozart", "Muddy Waters", "Otis Rush", "Taylor Swift", "Troye Sivan", "Vivaldi"]
+    pic = ["Alan Walker", "Alexandra Kay", "Avril Lavigne", "Beethoven", "Bizet", "Bruce Springsteen", "Charles Brown", "Charley Patton", "Don Henley", "Eagles", "Ella Fitzgerald", "Frank Sinatra", "J.S. Bach", "Louis Armstrong", "Maroon 5", "Miles Davis", "Monteverdi", "Morgan Wallen", "Mozart", "Muddy Waters", "Otis Rush", "Taylor Swift", "Troye Sivan"]
 
     if pic.include?(singer)
       picname = singer+".jpg"

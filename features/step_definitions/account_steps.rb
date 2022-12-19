@@ -8,15 +8,6 @@ Given /the following account exist/ do |table|
       )
     end
   end
-
-  Given /I am the admin/ do
-    @current_user = Account.create!(
-      name: "Admin",
-      email: "admin@musiclub.com",
-      password: "Admin",
-      admin: false
-    )
-  end
   
  
   

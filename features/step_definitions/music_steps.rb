@@ -48,25 +48,3 @@ Then /I should see all the music/ do
   expect(page).to have_selector('tbody tr', count: Music.count)
   
 end
-
-### Utility Steps Just for this assignment.
-
-Then /^debug$/ do
-  # Use this to write "Then debug" in your scenario to open a console.
-   require "byebug"; byebug
-  1 # intentionally force debugger context in this method
-end
-
-Then /^debug javascript$/ do
-  # Use this to write "Then debug" in your scenario to open a JS console
-  page.driver.debugger
-  1
-end
-
-
-Then /complete the rest of of this scenario/ do
-  # This shows you what a basic cucumber scenario looks like.
-  # You should leave this block inside movie_steps, but replace
-  # the line in your scenarios with the appropriate steps.
-  fail "Remove this step from your .feature files"
-end
