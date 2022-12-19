@@ -30,4 +30,21 @@ class AccountsController < ApplicationController
     redirect_to login_path
   end
   
+  def signup
+  end
+
+  def create_account
+    email = params[:user][:email].strip
+    password_html = params[:password].strip
+    account = Account.find_by(email:email)
+    if account
+      flash.notice = "This account already exists!"
+      render :signup
+    else
+      Account.create({:name => email, :email => email, :password => password_html, :admin => false })
+      flash.notice = "Signup successfully!"
+      render :login
+    end 
+    
+  end
 end
